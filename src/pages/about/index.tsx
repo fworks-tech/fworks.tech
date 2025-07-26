@@ -1,38 +1,83 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import Card from '@/components/ui/Card';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Section } from '@/lib/types';
-import AboutFeature from '@/features/about/AboutFeature';
+import { getI18nProps } from '@/lib/i18n';
+import DefaultLayout from '@/components/layout/DefaultLayout';
 
-const contentDir = path.join(process.cwd(), 'content/about');
-
-function getAboutSections(): Section[] {
-  const files = fs.readdirSync(contentDir);
-
-  return files
-    .map((filename) => {
-      const filePath = path.join(contentDir, filename);
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-      const { data, content } = matter(fileContent);
-
-      return {
-        id: data.id,
-        title: data.title,
-        image: data.image,
-        order: data.order,
-        content: content.trim(),
-      } as Section;
-    })
-    .sort((a, b) => a.order - b.order);
+export async function getStaticProps({ locale }: { locale: string }) {
+  return await getI18nProps(locale, ['about']);
 }
 
-export async function getStaticProps() {
-  const sections = getAboutSections();
-  return {
-    props: { sections },
-  };
+export default function AboutPage() {
+  const { t } = useTranslation('about');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const carouselItems = t('carouselItems', { returnObjects: true }) as Section[];
+
+  return (
+    <Card variant="borderless">
+      <section className="mx-4 mt-2 grid grid-cols-1 gap-2 md:grid-cols-[340px_1fr] md:px-12">
+        {carouselItems[currentIndex]?.image && (
+          <div className="flex h-48 w-full items-center justify-center md:h-[340px] md:w-[340px]">
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="flex w-full flex-shrink-0 justify-center md:w-[340px]"
+            >
+              <div className="relative h-48 w-48 md:h-[340px] md:w-[340px]">
+                <Image
+                  src={carouselItems[currentIndex].image}
+                  alt={carouselItems[currentIndex].title || 'Image'}
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="(max-width: 768px) 12rem, 340px"
+                />
+              </div>
+            </motion.div>
+          </div>
+        )}
+
+        <div className="flex flex-col justify-center gap-4 text-center md:text-left">
+          {carouselItems[currentIndex]?.title && (
+            <motion.h2
+              className="light-neon-text text-3xl font-semibold md:text-4xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              {carouselItems[currentIndex].title}
+            </motion.h2>
+          )}
+          <p className="mt-2 text-justify text-base leading-relaxed text-gray-300 md:text-lg">
+            {carouselItems[currentIndex]?.content || ''}
+          </p>
+          <div className="mt-8 flex justify-center gap-4">
+            {carouselItems.map((_, index) => (
+              <motion.div
+                key={index}
+                className={`h-4 w-4 cursor-pointer rounded-full ${
+                  index === currentIndex
+                    ? 'neon-border neon-carrosel-nav-icon-active'
+                    : 'neon-border'
+                }`}
+                onClick={() => setCurrentIndex(index)}
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.2 }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </Card>
+  );
 }
 
-export default function About({ sections }: { sections: Section[] }) {
-  return <AboutFeature sections={sections} />;
-}
+// 🧩 Adiciona suporte ao layout dinâmico
+AboutPage.getLayout = (page: React.ReactNode) => <DefaultLayout>{page}</DefaultLayout>;

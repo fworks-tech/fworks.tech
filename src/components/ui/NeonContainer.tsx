@@ -1,4 +1,3 @@
-import { Section } from '@/lib/types';
 import { ReactNode } from 'react';
 
 type NeonContainerProps = {
@@ -9,7 +8,7 @@ type NeonContainerProps = {
 export default function NeonContainer({ children, className = '' }: NeonContainerProps) {
   return (
     <div
-      className={`relative w-full flex flex-auto rounded-xl p-6 sm:p-8 bg-black/20 backdrop-blur-md border-2 border-cyan-400 shadow-[0_0_20px_4px_#00ccff] ${className}`}
+      className={`relative flex w-full flex-auto rounded-xl border-2 border-cyan-400 bg-black/20 p-6 shadow-[0_0_20px_4px_#00ccff] backdrop-blur-md sm:p-8 ${className}`}
     >
       {children}
     </div>

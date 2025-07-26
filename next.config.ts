@@ -1,8 +1,10 @@
+// next.config.ts
 import type { NextConfig } from 'next';
-import { i18n } from './next-i18next.config';
+import nextI18NextConfig from './next-i18next.config';
 
-const nextConfig: NextConfig = {
-  i18n: i18n,
+const config: NextConfig = {
+  i18n: nextI18NextConfig.i18n,
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+export default config;

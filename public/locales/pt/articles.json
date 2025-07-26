@@ -1,0 +1,30 @@
+{
+  "title": "Artigos",
+  "description": "Descubra os últimos artigos sobre tecnologia, inovação e sustentabilidade.",
+  "intro": "Aqui compartilho reflexões e aprendizados da minha jornada no mundo tech.\n\nMais do que artigos — são conversas abertas sobre o que realmente importa na era digital.",
+  "emptyMessage": "Ainda não há artigos publicados — mas novidades vêm aí!",
+  "subtitle": "Reflexões, ideias e experimentos sobre tecnologia, inovação e criatividade.",
+  "articles": [
+    {
+      "id": "1",
+      "title": "Lorem ipsum dolor sit amet",
+      "date": "2023-10-01",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": "2",
+      "title": "Ut enim ad minim veniam",
+      "date": "2023-10-15",
+      "summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  ],
+  "readMore": "Leia mais",
+  "seo": {
+    "title": "Artigos da FWORKS",
+    "description": "Explore artigos sobre tecnologia, ética na IA, inovação e criatividade digital.",
+    "keywords": "artigos, tecnologia, inovação, inteligência artificial, blog tech",
+    "ogImage": "/assets/og-articles-pt.png"
+  }
+}

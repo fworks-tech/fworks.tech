@@ -1,0 +1,24 @@
+{
+  "carouselItems": [
+    {
+      "id": "intro",
+      "title": "Was ist FWORKS?",
+      "image": "/assets/icons/tech.png",
+      "order": 1,
+      "content": "FWORKS TECH ist vor allem ein persönlicher Raum. Wer mich kennt, weiß, dass ich seit über einem Jahrzehnt in der IT arbeite und forsche.\n\nMeine Idee hier ist es, das Wissen, das ich in dieser Zeit gesammelt habe, zu teilen und es mit der Welt von heute zu verbinden. Und das Wichtigste: Ich verfolge keinerlei finanzielle Interessen mit dem, was ich hier veröffentliche.\n\nDas Internet ist ein riesiger — und für immer FREIER — Raum voller Möglichkeiten. Dieser Ort soll genau das widerspiegeln: wo Technologie auf Freiheit trifft, um Ideen Wirklichkeit werden zu lassen."
+    },
+    {
+      "id": "mission",
+      "title": "Und worum geht es eigentlich?",
+      "image": "/assets/icons/mission.png",
+      "order": 2,
+      "content": "Die Idee ist, diesen Raum lebendig zu halten — mit Inhalten, Gedanken und Projekten, die Menschen helfen, die digitalen Veränderungen unserer Zeit zu verstehen — auf zugängliche und nicht-kommerzielle Weise.\n\nViele Menschen sorgen sich über den rasanten technologischen Fortschritt, aber nur wenige verstehen ihn wirklich — und noch weniger wissen, wie sie davon profitieren können.\n\nHier möchte ich Brücken bauen zwischen der digitalen Welt und dem realen Leben. Zeigen, dass es möglich ist, Technologie bewusst zu nutzen und sie zu einem echten Verbündeten zu machen — heute und in der gemeinsamen Zukunft."
+    }
+  ],
+  "seo": {
+    "title": "Über FWORKS",
+    "description": "Entdecken Sie die Mission und den Ursprung von FWORKS TECH — wo Technologie auf Menschen und Bedeutung trifft.",
+    "keywords": "über, fworks, mission, technologie, innovation",
+    "ogImage": "/assets/og-about-de.png"
+  }
+}

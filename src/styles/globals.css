@@ -1,5 +1,30 @@
 @import 'tailwindcss';
 
+/* Font Sizes */
+.font-xs {
+  font-size: 0.75rem; /* Extra small */
+}
+
+.font-sm {
+  font-size: 0.875rem; /* Small */
+}
+
+.font-base {
+  font-size: 1rem; /* Base */
+}
+
+.font-lg {
+  font-size: 1.125rem; /* Large */
+}
+
+.font-xl {
+  font-size: 1.25rem; /* Extra large */
+}
+
+.font-2xl {
+  font-size: 1.5rem; /* 2x large */
+}
+
 .nav-neon {
   color: #9ae7ff;
   text-shadow:
@@ -9,6 +34,7 @@
   transition:
     color 0.2s,
     text-shadow 0.1s;
+  font-size: 1rem; /* Tamanho base */
 }
 
 .neon-border {
@@ -19,6 +45,10 @@
     0 0 44px #9ae7ff;
   border-color: #00ccff;
   transition: box-shadow 0.1s;
+}
+
+.neon-carrosel-nav-icon-active {
+  background-color: #00ccff;
 }
 
 .neon-text {
@@ -38,16 +68,37 @@
     0 0 24px #d946ef;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* Text Shadows */
+.text-neon {
+  text-shadow:
+    0 0 5px #d946ef,
+    0 0 10px #d946ef,
+    0 0 20px #d946ef;
 }
+
+.text-light-neon {
+  text-shadow:
+    0 0 3px #e499ff,
+    0 0 12px #d946ef,
+    0 0 18px #d946ef,
+    0 0 24px #d946ef;
+}
+
+/* .text-fworks-glow {
+  text-shadow:
+    0 0 3px #9ae7ff,
+    0 0 12px #00ccff,
+    0 0 18px #00ccff,
+    0 0 24px #00ccff;
+} */
+
+/* .text-tech-glow {
+  text-shadow:
+    0 0 3px #e499ff,
+    0 0 12px #d946ef,
+    0 0 18px #d946ef,
+    0 0 24px #d946ef;
+} */
 
 .animate-fade-in {
   animation: fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,6 +120,18 @@
     0 0 18px #00ccff,
     0 0 24px #00ccff;
   animation: pulse-blue 3s ease-in-out infinite;
+  font-size: 1.75rem;
+}
+
+.text-fworks-logo {
+  color: #00ccff;
+  text-shadow:
+    0 0 3px #00ccff,
+    0 0 9px #d946ef,
+    0 0 12px #d946ef,
+    0 0 16px #d946ef;
+  /* animation: pulse-blue 2s ease-in-out infinite; */
+  font-size: 1.75rem;
 }
 
 .text-tech-glow {
@@ -79,6 +142,7 @@
     0 0 18px #d946ef,
     0 0 24px #d946ef;
   animation: pulse-purple 3s ease-in-out infinite;
+  font-size: 1.25rem;
 }
 
 @keyframes pulse-blue {
@@ -116,5 +180,105 @@
       0 0 7px #d946ef,
       0 0 15px #d946ef,
       0 0 25px #d946ef;
+  }
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse-blue {
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px #9ae7ff,
+      0 0 15px #00ccff,
+      0 0 25px #00ccff,
+      0 0 35px #00ccff;
+  }
+
+  50% {
+    text-shadow:
+      0 0 3px #9ae7ff,
+      0 0 7px #00ccff,
+      0 0 15px #00ccff,
+      0 0 25px #00ccff;
+  }
+}
+
+@keyframes pulse-purple {
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px #e499ff,
+      0 0 15px #d946ef,
+      0 0 25px #d946ef,
+      0 0 35px #d946ef;
+  }
+
+  50% {
+    text-shadow:
+      0 0 3px #e499ff,
+      0 0 7px #d946ef,
+      0 0 15px #d946ef,
+      0 0 25px #d946ef;
+  }
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-pulse-blue {
+  animation: pulse-blue 3s ease-in-out infinite;
+}
+
+.animate-pulse-purple {
+  animation: pulse-purple 3s ease-in-out infinite;
+}
+
+/* Media Queries */
+/* Ajuste global para tamanhos de fonte */
+html {
+  font-size: 16px; /* Tamanho base */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Reduz o tamanho da fonte em dispositivos menores */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px; /* Reduz ainda mais para telas muito pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-fworks-glow,
+  .text-tech-glow {
+    font-size: 1.25rem; /* Ajuste para telas menores */
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-neon {
+    font-size: 1.125rem; /* Ajuste para telas maiores */
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-neon {
+    font-size: 1.25rem; /* Ajuste para telas médias */
   }
 }

@@ -13,7 +13,7 @@ export default function Navbar() {
   // Detect window size to determine if the device is mobile
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Consider "mobile" if width < 768px
+      setIsMobile(window.innerWidth < 1000); // Consider small device if width < 1000
     };
 
     // Run on mount and on resize
@@ -26,15 +26,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full top-0 left-0 z-20 bg-transparent flex items-center justify-between h-16 px-4 md:px-10">
-      {/* Logo */}
+    <nav className="flex h-16 items-center justify-between bg-transparent p-12">
       <Logo />
 
-      {/* Menu Button for Small Screens */}
       {isMobile ? (
         <>
           <button
-            className="md:hidden text-cyan-400 text-3xl focus:outline-none"
+            className="text-3xl text-cyan-400 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -43,17 +41,17 @@ export default function Navbar() {
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div
-                initial={{ opacity: 0, x: '100%' }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: '100%' }}
+                // initial={{ opacity: 0, x: '100%' }}
+                // animate={{ opacity: 1, x: 0 }}
+                // exit={{ opacity: 0, x: '100%' }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-0 right-0 h-full w-full z-20 p-12 flex flex-col items-start gap-6 rounded-l-xl shadow-xl"
+                className="absolute top-0 right-0 z-20 flex h-full w-full flex-col items-start gap-6 rounded-l-xl p-12 shadow-xl"
                 style={{ backgroundColor: '#120052' }}
               >
-                <div className="w-full flex justify-between items-center mb-4">
+                <div className="mb-4 flex w-full items-center justify-between">
                   <Logo />
                   <button
-                    className="text-white text-3xl"
+                    className="text-3xl text-white"
                     onClick={toggleMenu}
                     aria-label="Close Menu"
                   >
@@ -67,7 +65,7 @@ export default function Navbar() {
         </>
       ) : (
         <div
-          className={`absolute md:static top-16 left-0 w-full md:w-auto md:bg-transparent flex flex-col md:flex-row items-center gap-2 md:gap-4 transition-transform duration-300 ${
+          className={`flex w-full flex-col items-center gap-2 transition-transform duration-300 md:static md:w-auto md:flex-row md:gap-4 md:bg-transparent ${
             isMenuOpen || !isMobile ? 'translate-y-0' : '-translate-y-full md:translate-y-0'
           }`}
         >

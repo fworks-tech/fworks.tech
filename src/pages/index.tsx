@@ -1,25 +1,21 @@
+import DefaultLayout from '@/components/layout/DefaultLayout';
+import { getI18nProps } from '@/lib/i18n';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import i18n from 'i18next';
-import { initReactI18next, useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return await getI18nProps(locale);
+}
 
 export default function HomePage() {
   const { t } = useTranslation('common');
-
-  i18n.use(initReactI18next).init({
-    resources: {
-      /* your translations */
-    },
-    lng: 'en',
-    fallbackLng: 'en',
-    interpolation: { escapeValue: false },
-  });
 
   return (
     <section className="w-full max-w-5xl p-6 sm:p-8">
       <div className="flex flex-col items-center justify-center text-center">
         <motion.h1
-          className="text-5xl sm:text-6xl font-semibold tracking-tight light-neon-text"
+          className="text-5xl font-semibold tracking-tight text-[#e499ff] sm:text-6xl"
           animate={{ opacity: [1, 0.6, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -27,12 +23,12 @@ export default function HomePage() {
         </motion.h1>
 
         <motion.p
-          className="text-lg mt-4 text-gray-300 max-w-xl"
+          className="mt-4 max-w-xl text-lg text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          {t('home-intro')}
+          {t('intro')}
         </motion.p>
 
         <motion.div
@@ -49,3 +45,6 @@ export default function HomePage() {
     </section>
   );
 }
+
+// 🧩 Adiciona suporte ao layout dinâmico
+HomePage.getLayout = (page: React.ReactNode) => <DefaultLayout>{page}</DefaultLayout>;
