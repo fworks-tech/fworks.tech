@@ -3,6 +3,8 @@ import path from 'path';
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname
 });
@@ -22,16 +24,15 @@ const config = [
   }),
   {
     rules: {
+      'no-console': [isProd ? 'error' : 'warn', { allow: ['warn', 'error'] }],
+      'no-debugger': isProd ? 'error' : 'off',
+      'react/jsx-key': 'warn',
+      'react/react-in-jsx-scope': 'off', // Next.js não precisa
       'import/order': [
         'error',
         {
           groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-          pathGroups: [
-            {
-              pattern: '@/**',
-              group: 'internal'
-            }
-          ],
+          pathGroups: [{ pattern: '@/**', group: 'internal' }],
           pathGroupsExcludedImportTypes: ['builtin'],
           alphabetize: { order: 'asc', caseInsensitive: true },
           'newlines-between': 'always'
@@ -50,13 +51,6 @@ const config = [
     rules: {
       '@typescript-eslint/no-unused-vars': ['error'],
       '@typescript-eslint/consistent-type-imports': ['error']
-    }
-  },
-  {
-    rules: {
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'react/jsx-key': 'warn',
-      'react/react-in-jsx-scope': 'off' // Next.js não precisa
     }
   },
   {
