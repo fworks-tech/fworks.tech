@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "lint:report": "eslint . --ext .ts,.tsx --format=html -o eslint-report.html",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"*.{js,mjs,cjs,json}\" \".*.{js,json}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"*.{js,mjs,cjs,json}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
     "fix": "yarn lint:fix && yarn format",
     "prepare": "husky"
