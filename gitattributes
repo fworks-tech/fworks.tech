@@ -4,3 +4,5 @@ README.md linguist-documentation
 
 # Define o README.en.md como o principal para exibição no GitHub
 README.en.md export-ignore
+
+* text=auto eol=lf
