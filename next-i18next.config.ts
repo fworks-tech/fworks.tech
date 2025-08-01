@@ -1,4 +1,3 @@
-// next-i18next.config.ts
 import type { UserConfig } from 'next-i18next';
 
 const nextI18NextConfig: UserConfig = {
