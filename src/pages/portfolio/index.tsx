@@ -1,50 +1,36 @@
-import { useState } from 'react';
-import Card from '@/components/ui/Card';
+import { useTranslation } from 'next-i18next';
 
-const carouselItems = [
-  {
-    text: 'Sou um desenvolvedor com mais de 10 anos de experiência em tecnologia, especializado na criação de aplicações web escaláveis, acessíveis e performáticas. Tenho paixão por resolver problemas complexos com soluções simples e elegantes. Já atuei em projetos internacionais, liderando times e colaborando com equipes multidisciplinares.',
-  },
-  {
-    text: 'Tenho experiência com React, Next.js, Node.js, TypeScript, e diversas outras tecnologias modernas. Gosto de aprender coisas novas e compartilhar conhecimento com a comunidade.',
-  },
-  {
-    text: 'Além de programar, curto música, games e explorar novas tendências em design e tecnologia.',
-  },
-];
+import DefaultLayout from '@/components/layout/DefaultLayout';
+import EmptyMessage from '@/components/shared/EmptyMessage';
+import SeoHead from '@/components/shared/SeoHead';
+import PortfolioFeature from '@/features/portfolio/PortfolioFeature';
+import { getI18nProps } from '@/lib/i18n';
+import type { Section } from '@/lib/types';
+import type { SeoMetadata } from '@/types/seo';
 
-export default function Portfolio() {
-  const [index, setIndex] = useState(0);
+export async function getStaticProps({ locale }: { locale: string }) {
+  return await getI18nProps(locale, ['portfolio']);
+}
 
-  const prev = () => setIndex((i) => (i === 0 ? carouselItems.length - 1 : i - 1));
-  const next = () => setIndex((i) => (i === carouselItems.length - 1 ? 0 : i + 1));
+export default function PortfolioPage({ sections }: { sections: Section[] }) {
+  const { t } = useTranslation('portfolio');
+  const seo = t('seo', { returnObjects: true }) as SeoMetadata;
+
+  if (!sections || sections.length === 0) {
+    return <EmptyMessage message={t('emptyMessage')} />;
+  }
 
   return (
-    <div className="flex flex-col gap-4 w-full px-6 sm:px-10 lg:px-20">
-      <h1 className="text-gray-300 mb-8 text-4xl tracking-tighter text-balance sm:text-5xl lg:text-5xl">
-        Portfolio
-      </h1>
-      <Card>
-        <section className="max-w-4xl mx-auto text-center px-4 h-50-lg flex flex-col items-center">
-          <p className="text-gray-300 text-lg mb-4">{carouselItems[index].text}</p>
-          <div className="flex gap-4 justify-center">
-            <button
-              onClick={prev}
-              className="px-4 py-2 rounded bg-cyan-900 text-white hover:bg-cyan-700 transition"
-              aria-label="Anterior"
-            >
-              &#8592;
-            </button>
-            <button
-              onClick={next}
-              className="px-4 py-2 rounded bg-cyan-900 text-white hover:bg-cyan-700 transition"
-              aria-label="Próximo"
-            >
-              &#8594;
-            </button>
-          </div>
-        </section>
-      </Card>
-    </div>
+    <>
+      <SeoHead {...seo} url="https://fworks.tech/portfolio" />
+      <section className="w-full max-w-5xl p-6 sm:p-8">
+        <div className="flex flex-col items-center justify-center text-center">
+          <PortfolioFeature sections={sections} />
+        </div>
+      </section>
+    </>
   );
 }
+
+// 🧩 Adiciona suporte ao layout dinâmico
+PortfolioPage.getLayout = (page: React.ReactNode) => <DefaultLayout>{page}</DefaultLayout>;

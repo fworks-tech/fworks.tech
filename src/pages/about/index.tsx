@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+
 import matter from 'gray-matter';
-import { Section } from '@/lib/types';
+
 import AboutFeature from '@/features/about/AboutFeature';
+import type { Section } from '@/lib/types';
 
 const contentDir = path.join(process.cwd(), 'content/about');
 
@@ -20,7 +22,7 @@ function getAboutSections(): Section[] {
         title: data.title,
         image: data.image,
         order: data.order,
-        content: content.trim(),
+        content: content.trim()
       } as Section;
     })
     .sort((a, b) => a.order - b.order);
@@ -29,7 +31,7 @@ function getAboutSections(): Section[] {
 export async function getStaticProps() {
   const sections = getAboutSections();
   return {
-    props: { sections },
+    props: { sections }
   };
 }
 

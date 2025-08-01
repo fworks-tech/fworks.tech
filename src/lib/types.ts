@@ -1,3 +1,5 @@
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+
 export type Section = {
   id: string;
   title: string;
@@ -12,5 +14,5 @@ export type Project = {
   image?: string;
   order: number;
   tags?: string[];
-  mdx: import('next-mdx-remote').MDXRemoteSerializeResult;
+  mdx: MDXRemoteSerializeResult;
 };

@@ -1,0 +1,30 @@
+{
+  "title": "Artikel",
+  "description": "Entdecke die neuesten Artikel über Technologie, Innovation und Nachhaltigkeit.",
+  "intro": "Hier teile ich Gedanken und Erkenntnisse aus meiner Reise durch die Tech-Welt.\n\nMehr als nur Artikel — das sind offene Gespräche über das, was im digitalen Zeitalter wirklich zählt.",
+  "emptyMessage": "Noch keine Artikel veröffentlicht — aber neue Inhalte sind unterwegs!",
+  "subtitle": "Reflexionen, Ideen und Experimente über Technologie, Innovation und Kreativität.",
+  "articles": [
+    {
+      "id": "1",
+      "title": "Die Zukunft der KI: Freund oder Feind?",
+      "date": "2023-10-01",
+      "summary": "Wir untersuchen die Auswirkungen der künstlichen Intelligenz auf unser Leben und unsere Wirtschaft.",
+      "content": "Künstliche Intelligenz verändert ganze Branchen — von der Gesundheitsversorgung bis zur Unterhaltung. Doch wie stellen wir sicher, dass ihre Entwicklung ethisch und für alle von Vorteil ist? In diesem Artikel beleuchten wir die Chancen und Herausforderungen der KI."
+    },
+    {
+      "id": "2",
+      "title": "Technologie und Nachhaltigkeit: Ein Weg in die Zukunft",
+      "date": "2023-10-15",
+      "summary": "Ein Überblick darüber, wie Technologie nachhaltigere Praktiken fördern kann.",
+      "content": "Nachhaltigkeit ist heute ein zentrales Thema. Technologie bietet mächtige Werkzeuge zur Reduzierung unseres ökologischen Fußabdrucks — von erneuerbaren Energien bis hin zu Konzepten der Kreislaufwirtschaft. Hier stellen wir inspirierende Beispiele vor und zeigen, wie wir selbst Teil des Wandels sein können."
+    }
+  ],
+  "readMore": "Mehr lesen",
+  "seo": {
+    "title": "FWORKS Artikel",
+    "description": "Entdecke Artikel über Technologie, KI-Ethik, Innovation und digitale Kreativität.",
+    "keywords": "artikel, technologie, innovation, künstliche intelligenz, tech-blog",
+    "ogImage": "/assets/og-articles-de.png"
+  }
+}

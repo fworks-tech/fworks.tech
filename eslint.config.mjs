@@ -1,40 +1,67 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
-import prettier from 'eslint-config-prettier';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
+import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: import.meta.dirname
 });
 
-const eslintConfig = [
-  // Configurações compatíveis com o formato antigo
-  ...compat.extends(
-    'next/core-web-vitals',
-    'next',
-    'plugin:jsx-a11y/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ),
-
+const config = [
+  js.configs.recommended,
+  ...compat.config({
+    extends: [
+      'next/core-web-vitals',
+      'next/typescript',
+      'plugin:prettier/recommended',
+      'prettier',
+      'plugin:@next/next/recommended',
+      'plugin:react-hooks/recommended',
+      'plugin:jsx-a11y/recommended'
+    ]
+  }),
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      prettier: eslintPluginPrettier,
+    rules: {
+      'import/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          pathGroups: [
+            {
+              pattern: '@/**',
+              group: 'internal'
+            }
+          ],
+          pathGroupsExcludedImportTypes: ['builtin'],
+          alphabetize: { order: 'asc', caseInsensitive: true },
+          'newlines-between': 'always'
+        }
+      ]
+    }
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: path.resolve()
+      }
     },
     rules: {
-      'prettier/prettier': 'error',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      quotes: ['error', 'double'], // Enforce double quotes
-    },
+      '@typescript-eslint/no-unused-vars': ['error'],
+      '@typescript-eslint/consistent-type-imports': ['error']
+    }
   },
-
-  // Desativa regras que conflitam com Prettier
-  prettier,
+  {
+    rules: {
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'react/jsx-key': 'warn',
+      'react/react-in-jsx-scope': 'off' // Next.js não precisa
+    }
+  },
+  {
+    ignores: ['.next/**/*', 'node_modules/**/*', 'dist/**/*', 'build/**/*']
+  }
 ];
 
-export default eslintConfig;
+export default config;

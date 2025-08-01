@@ -1,0 +1,30 @@
+{
+  "title": "Articles",
+  "description": "Découvrez les derniers articles sur la technologie, l’innovation et la durabilité.",
+  "intro": "Je partage ici des réflexions et des apprentissages issus de mon parcours dans le monde de la tech.\n\nPlus que de simples articles — ce sont des discussions ouvertes sur ce qui compte vraiment à l’ère numérique.",
+  "emptyMessage": "Aucun article publié pour le moment — mais restez à l'écoute, de nouvelles idées arrivent bientôt !",
+  "subtitle": "Réflexions, idées et expérimentations sur la technologie, l’innovation et la créativité.",
+  "articles": [
+    {
+      "id": "1",
+      "title": "L'avenir de l'IA : ami ou ennemi ?",
+      "date": "2023-10-01",
+      "summary": "Nous explorons l'impact de l'intelligence artificielle sur nos vies et nos entreprises.",
+      "content": "L'intelligence artificielle transforme des industries entières, de la santé à l'entertainment. Mais comment pouvons-nous garantir que son développement soit éthique et bénéfique pour tous ? Dans cet article, nous analysons les défis et les opportunités que présente l'IA."
+    },
+    {
+      "id": "2",
+      "title": "Technologie et durabilité : un chemin vers l'avenir",
+      "date": "2023-10-15",
+      "summary": "Un aperçu de la façon dont la technologie peut promouvoir des pratiques plus durables.",
+      "content": "La durabilité est un sujet crucial dans le monde actuel. La technologie offre des outils puissants pour réduire notre impact environnemental, des énergies renouvelables aux solutions d'économie circulaire. Ici, nous explorons des exemples inspirants et comment nous pouvons contribuer au changement."
+    }
+  ],
+  "readMore": "En savoir plus",
+  "seo": {
+    "title": "Articles de FWORKS",
+    "description": "Explorez des articles sur la technologie, l’éthique de l’IA, l’innovation et la créativité numérique.",
+    "keywords": "articles, technologie, innovation, intelligence artificielle, blog tech",
+    "ogImage": "/assets/og-articles-fr.png"
+  }
+}

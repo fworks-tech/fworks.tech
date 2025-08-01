@@ -1,6 +1,6 @@
-import { Section } from '@/lib/types';
 import NeonCarousel from '@/components/shared/NeonCarousel';
 import NeonContainer from '@/components/ui/NeonContainer';
+import type { Section } from '@/lib/types';
 
 export default function AboutFeature({ sections }: { sections: Section[] }) {
   return (
