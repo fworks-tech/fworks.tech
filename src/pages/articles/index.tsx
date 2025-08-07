@@ -5,18 +5,24 @@ import EmptyMessage from '@/components/shared/EmptyMessage';
 import SeoHead from '@/components/shared/SeoHead';
 import ArticlesFeature from '@/features/articles/ArticlesFeature';
 import { getI18nProps } from '@/lib/i18n';
-import type { Section } from '@/lib/types';
 import type { SeoMetadata } from '@/types/seo';
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return await getI18nProps(locale, ['articles']);
 }
 
-export default function ArticlesPage({ sections }: { sections: Section[] }) {
+export default function ArticlesPage() {
   const { t } = useTranslation('articles');
   const seo = t('seo', { returnObjects: true }) as SeoMetadata;
+  const content = t('articles', { returnObjects: true }) as {
+    id: string;
+    title: string;
+    content: string;
+    date: string;
+    summary: string;
+  }[];
 
-  if (!sections || sections.length === 0) {
+  if (!content || content.length === 0) {
     return <EmptyMessage message={t('emptyMessage')} />;
   }
 
@@ -25,7 +31,7 @@ export default function ArticlesPage({ sections }: { sections: Section[] }) {
       <SeoHead {...seo} url="https://fworks.tech/articles" />
       <section className="w-full max-w-5xl p-6 sm:p-8">
         <div className="flex flex-col items-center justify-center text-center">
-          <ArticlesFeature sections={sections} />
+          <ArticlesFeature content={content} />
         </div>
       </section>
     </>
