@@ -14,7 +14,7 @@ export default function Card({
   };
 
   return (
-    <div className={`animate-fade-in relative mx-auto flex h-min w-full ${variants[variant]} `}>
+    <div className={`animate-fade-in relative mx-auto flex w-full ${variants[variant]} `}>
       {children}
     </div>
   );

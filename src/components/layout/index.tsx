@@ -9,7 +9,7 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative flex min-h-screen w-screen flex-col">
+    <div className="relative flex flex-col">
       {/* Background */}
       <div className="fixed inset-0 -z-10">
         <Image
