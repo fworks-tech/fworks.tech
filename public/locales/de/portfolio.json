@@ -3,7 +3,7 @@
   "subtitle": "Projekte, die meinen Weg als Entwickler und digitaler Schöpfer geprägt haben.",
   "intro": "Hier sind einige der bedeutendsten Arbeiten, an denen ich beteiligt war — von vollständigen Produkten bis hin zu kreativen Lösungen für reale technologische Herausforderungen.\n\nJedes Projekt erzählt eine Geschichte, steht für ein überwundenes Hindernis und markiert einen weiteren Schritt in meiner beruflichen Entwicklung.",
   "emptyMessage": "Noch keine Projekte hinzugefügt — aber bald wird dieser Bereich voller lebendiger Ideen sein.",
-  "projects": [
+  "portfolio": [
     {
       "id": "1",
       "title": "Lorem Ipsum Dolor",

@@ -3,7 +3,7 @@
   "subtitle": "Projetos que moldaram minha jornada como desenvolvedor e criador digital.",
   "intro": "Aqui estão alguns dos trabalhos mais significativos dos quais participei — de produtos completos a soluções criativas para problemas reais com tecnologia.\n\nCada projeto conta uma história, representa um desafio superado e um passo a mais na minha evolução profissional.",
   "emptyMessage": "Nenhum projeto adicionado ainda — mas em breve este espaço estará repleto de ideias ganhando vida.",
-  "projects": [
+  "portfolio": [
     {
       "id": "1",
       "title": "Lorem Ipsum Dolor",

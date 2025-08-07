@@ -3,7 +3,7 @@
   "subtitle": "Projects that have shaped my journey as a developer and digital creator.",
   "intro": "Here are some of the most meaningful works I’ve contributed to — from full products to creative solutions for real-world tech challenges.\n\nEach project tells a story, represents an obstacle overcome, and marks another step forward in my professional evolution.",
   "emptyMessage": "No projects added yet — but soon this space will be filled with ideas coming to life.",
-  "projects": [
+  "portfolio": [
     {
       "id": "1",
       "title": "Lorem Ipsum Dolor",

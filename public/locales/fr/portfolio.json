@@ -3,7 +3,7 @@
   "subtitle": "Projets qui ont façonné mon parcours de développeur et de créateur numérique.",
   "intro": "Voici quelques-unes des réalisations les plus significatives auxquelles j’ai contribué — des produits complets aux solutions créatives face à de vrais défis technologiques.\n\nChaque projet raconte une histoire, représente un défi surmonté et une nouvelle étape dans mon évolution professionnelle.",
   "emptyMessage": "Aucun projet ajouté pour le moment — mais cet espace sera bientôt rempli d’idées prenant vie.",
-  "projects": [
+  "portfolio": [
     {
       "id": "1",
       "title": "Lorem Ipsum Dolor",
