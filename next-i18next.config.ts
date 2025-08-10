@@ -4,7 +4,6 @@ const nextI18NextConfig: UserConfig = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'pt', 'es', 'fr', 'de'],
-    // 🔧 Aqui deve ser "false" se estiver tipado como NextJsI18NConfig
     localeDetection: false
   },
   ns: ['common', 'articles', 'about', 'portfolio'],
