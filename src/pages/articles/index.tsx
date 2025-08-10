@@ -22,7 +22,9 @@ export default function ArticlesPage() {
     summary: string;
   }[];
 
-  if (!content || content.length === 0) {
+  const skipForNow = true; // Skip for now, as the articles are not yet implemented
+
+  if (!content || content.length === 0 || skipForNow) {
     return <EmptyMessage message={t('emptyMessage')} />;
   }
 
