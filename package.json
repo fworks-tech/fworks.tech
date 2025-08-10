@@ -2,6 +2,7 @@
   "name": "fworks.tech",
   "version": "0.1.1",
   "private": true,
+  "packageManager": "yarn@4.5.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +16,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "framer-motion": "^12.11.0",
     "gray-matter": "^4.0.3",
     "i18next": "^25.2.1",
