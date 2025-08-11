@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="z-20 py-6 text-center text-sm text-cyan-400 sm:text-base md:text-lg">
+    <footer className="align-center mb-4 flex flex-col justify-between py-6 text-center text-sm text-cyan-400 sm:text-base md:text-lg">
       <p>
         <span
           dangerouslySetInnerHTML={{
