@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
-import DefaultLayout from '@/components/layout/DefaultLayout';
+import FullscreenLayout from '@/components/layout/FullscreenLayout';
 import SeoHead from '@/components/shared/SeoHead';
+import NeonLinkButton from '@/components/ui/NeonLinkButton';
 import { getI18nProps } from '@/lib/i18n';
 import { availableNamespaces } from '@/lib/i18nNamespaces';
 
@@ -24,24 +24,19 @@ export default function NotFoundPage() {
   return (
     <>
       <SeoHead {...temp_seo} url="https://fworks.tech/404" />
-      <div className="flex flex-col items-center justify-center gap-8 p-8 text-center">
+      <div className="flex h-full flex-col items-center justify-between gap-8 p-8 text-center">
         <motion.h1
-          className="light-neon-text text-5xl font-semibold tracking-tight sm:text-6xl"
+          className="light-neon-text text-5xl font-semibold tracking-tight sm:text-4xl"
           animate={{ opacity: [1, 0.6, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           {t('notFoundMessage', 'Oops! Page not found.')}
         </motion.h1>
 
-        <Link
-          href="/"
-          className="neon-border mt-4 inline-block rounded-lg border border-cyan-400 px-6 py-2 text-cyan-300 transition-all hover:bg-cyan-400 hover:text-black"
-        >
-          {t('goHome', 'Go back to homepage')}
-        </Link>
+        <NeonLinkButton href="/" label={t('goHome', 'Go back to homepage')} />
       </div>
     </>
   );
 }
 
-NotFoundPage.getLayout = (page: React.ReactNode) => <DefaultLayout>{page}</DefaultLayout>;
+NotFoundPage.getLayout = (page: React.ReactNode) => <FullscreenLayout>{page}</FullscreenLayout>;

@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
 import { useTranslation } from 'next-i18next';
 
 import DefaultLayout from '@/components/layout/DefaultLayout';
 import SeoHead from '@/components/shared/SeoHead';
+import NeonLinkButton from '@/components/ui/NeonLinkButton';
 import { getI18nProps } from '@/lib/i18n';
 import type { SeoMetadata } from '@/types/seo';
 
@@ -18,10 +18,10 @@ export default function HomePage() {
   return (
     <>
       <SeoHead {...seo} url="https://fworks.tech/" />
-      <section className="w-full max-w-5xl p-6 sm:p-8">
-        <div className="flex flex-col items-center justify-center text-center">
+      <section className="h-full w-full p-6 sm:p-8" style={{ marginTop: '4rem' }}>
+        <div className="flex h-12 flex-auto flex-col items-center justify-center gap-4 text-center">
           <motion.h1
-            className="text-5xl font-semibold tracking-tight text-[#e499ff] sm:text-6xl"
+            className="light-neon-text text-center text-5xl font-semibold tracking-tight sm:text-4xl"
             animate={{ opacity: [1, 0.6, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
@@ -29,23 +29,24 @@ export default function HomePage() {
           </motion.h1>
 
           <motion.p
-            className="mt-4 max-w-xl text-lg text-gray-300"
+            className="max-w-xl text-lg text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
+            style={{ margin: '1rem 0 2rem' }}
           >
             {t('intro')}
           </motion.p>
 
           <motion.div
-            className="mt-10 animate-bounce cursor-pointer"
+            className="animate-bounce cursor-pointer"
             onClick={() => {
               const about = document.getElementById('about');
               if (about) about.scrollIntoView({ behavior: 'smooth' });
             }}
             whileHover={{ scale: 1.2 }}
           >
-            <ArrowDown size={40} className="text-cyan-400" />
+            <NeonLinkButton href="/about" label={t('about')} />
           </motion.div>
         </div>
       </section>
