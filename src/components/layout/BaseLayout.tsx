@@ -13,24 +13,21 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
   if (!ready) return <Loading />;
 
   return (
-    <div className="relative flex h-screen w-screen flex-col overflow-hidden" {...rest}>
+    <div className="relative flex h-screen w-full flex-col" {...rest}>
       {/* Background */}
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/second-background.png"
-          alt="FWORKS main background"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-        />
-      </div>
+      <Image
+        className="pointer-events-none -z-10 select-none object-cover"
+        src="/second-background.png"
+        alt="FWORKS main background"
+        fill
+        style={{ objectFit: 'cover' }}
+        priority
+      />
 
-      <main className="flex h-full w-full flex-1 flex-col items-center justify-center overflow-hidden p-8">
-        <div className="neon-border animate-fade-in max-w-9/12 md:max-w-8/12 flex h-full max-h-fit w-full flex-col p-6 sm:p-8 md:max-h-[80vh]">
+      <main className="flex h-full w-full p-8">
+        <div className="neon-border-shadow animate-fade-in max-w-8/12 align-center flex h-full w-full flex-1 flex-col justify-between p-4 sm:p-6">
           <Navbar />
-          <section className="flex h-full flex-auto flex-col items-center justify-center overflow-y-auto pt-1 sm:px-8 md:pt-4">
-            {children}
-          </section>
+          {children}
           <Footer />
         </div>
       </main>

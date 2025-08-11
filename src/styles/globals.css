@@ -680,6 +680,10 @@ video {
   height: 100vh;
 }
 
+.max-h-\[50vh\] {
+  max-height: 50vh;
+}
+
 .max-h-\[70vh\] {
   max-height: 70vh;
 }
@@ -1207,12 +1211,22 @@ video {
 
 .neon-border {
   box-shadow:
-    0 0 5px #00ccff,
-    0 0 12px #00ccff,
-    0 0 24px #9ae7ff,
-    0 0 44px #9ae7ff;
-  border-color: #00ccff;
+    0 0 5px #e499ff,
+    0 0 12px #e499ff;
+  border-color: #e499ff;
   transition: box-shadow 0.1s;
+  border-radius: 1rem;
+}
+
+.neon-border-shadow {
+  box-shadow:
+    0 0 5px #e499ff,
+    0 0 12px #e499ff,
+    0 0 24px #e499ff,
+    0 0 44px #e499ff;
+  border-color: #e499ff;
+  transition: box-shadow 0.1s;
+  border-radius: 1rem;
 }
 
 .neon-carrosel-nav-icon-active {
@@ -1243,14 +1257,6 @@ video {
     0 0 5px #d946ef,
     0 0 10px #d946ef,
     0 0 20px #d946ef;
-}
-
-.text-light-neon {
-  text-shadow:
-    0 0 3px #e499ff,
-    0 0 12px #d946ef,
-    0 0 18px #d946ef,
-    0 0 24px #d946ef;
 }
 
 /* .text-fworks-glow {
