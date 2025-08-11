@@ -88,19 +88,13 @@ export default function Language() {
       </button>
 
       {isOpen && (
-        <div
-          className="absolute right-0 mt-4 w-44 origin-top-right scale-100 transform rounded border border-cyan-400 shadow-md backdrop-blur-md transition-transform"
-          style={{
-            animation: 'fadeIn 0.2s ease-in-out',
-            boxShadow: '0 0 10px #00fff7, 0 0 20px #00fff7'
-          }}
-        >
+        <div className="animate-fade-in neon-border absolute right-0 mt-4 flex w-44 origin-top-right scale-100 cursor-pointer">
           <ul className="text-md py-1 text-gray-100">
             {languages.map((lang) => (
               <li key={lang.code}>
                 <button
-                  className={`flex w-full items-center gap-2 px-4 py-2 text-left transition-all hover:bg-cyan-800 ${
-                    i18n.language === lang.code ? 'font-bold text-cyan-400' : ''
+                  className={`flex w-full items-center gap-2 px-4 py-2 text-left ${
+                    i18n.language === lang.code ? 'font-bold' : ''
                   }`}
                   onClick={() => changeLanguage(lang.code)}
                 >
