@@ -1,0 +1,24 @@
+{
+  "carouselItems": [
+    {
+      "id": "intro",
+      "title": "O que é a FWORKS?",
+      "image": "/assets/icons/idea-2.png",
+      "order": 1,
+      "content": "A FWORKS TECH nada mais é que um espaço meu, que para quem me conhece, já sou alguém que há uma decada estuda e atua na área de Tecnologia da informação.\n\nA ideia minha ideia aqui é compartilhar o que aprendi nesse tempo e também fazer conexões desses conteúdos com o mundo que vivemos hoje. E o mais importante, sem querer um centavo de retorno financeiro por tudo que compartilharei aqui.\n\nA Internet é um lugar vasto e - para sempre LIVRE -  e cheio de possibilidades, e quero que esse espaço seja um reflexo disso, onde a tecnologia e a liberdade se encontram para transformar ideias em realidade."
+    },
+    {
+      "id": "mission",
+      "title": "E qual é a ideia?",
+      "image": "/assets/icons/mission.png",
+      "order": 2,
+      "content": "A ideia é, sempre que possível, manter este espaço vivo com conteúdos, reflexões e projetos que ajudem o público a entender — de forma acessível e livre de interesses comerciais — o que está por trás das transformações digitais que nos cercam.\n\nMuita gente se preocupa com o avanço da tecnologia, mas pouca gente realmente a entende — e menos ainda sabe como se beneficiar dela.\n\nAqui, quero construir pontes entre o que acontece no mundo digital e a vida real das pessoas. Mostrar que sim, é possível se apropriar da tecnologia, usá-la com consciência e fazer dela uma aliada no presente — e no futuro que estamos moldando juntos."
+    }
+  ],
+  "seo": {
+    "title": "Sobre a FWORKS",
+    "description": "Conheça a missão e a origem da FWORKS TECH — conectando inovação, pessoas e propósito.",
+    "keywords": "sobre, fworks, missão, tecnologia, inovação",
+    "ogImage": "/assets/og-about-pt.png"
+  }
+}

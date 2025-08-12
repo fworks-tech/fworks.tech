@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+
 import matter from 'gray-matter';
 
 const contentDir = path.join(process.cwd(), 'content/about');
@@ -26,7 +27,7 @@ export function getAboutSections(): Section[] {
         title: data.title,
         image: data.image,
         order: data.order,
-        content: content.trim(),
+        content: content.trim()
       } as Section;
     })
     .sort((a, b) => a.order - b.order);

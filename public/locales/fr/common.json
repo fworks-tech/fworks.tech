@@ -1,0 +1,19 @@
+{
+  "portfolio": "Projets",
+  "about": "À propos",
+  "articles": "Blog",
+  "intro": "Un coin d'internet — né libre — où les idées veulent être libres, le code circule librement et les esprits se connectent.",
+  "welcome": "Bienvenue chez FWORKS",
+  "footer": {
+    "copyright": "&copy; {{year}} FWORKS.TECH. Tous droits réservés.",
+    "privacyPolicy": "Politique de Confidentialité"
+  },
+  "notFoundMessage": "Oups ! Ce que vous cherchez n'existe pas ou ne correspond pas à ce que vous attendiez.",
+  "goHome": "Retour à l'accueil",
+  "seo": {
+    "title": "Bienvenue chez FWORKS",
+    "description": "Un coin d'internet — né libre — où les idées veulent être libres, le code circule librement et les esprits se connectent.",
+    "keywords": "technologie, fworks, blog, portfolio, IA, code",
+    "ogImage": "/assets/og-default-fr.png"
+  }
+}

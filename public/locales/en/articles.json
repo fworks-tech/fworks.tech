@@ -1,0 +1,30 @@
+{
+  "title": "Posts",
+  "description": "Discover the latest posts on technology, innovation, and sustainability.",
+  "intro": "Here I share reflections and lessons from my journey through the tech world.\n\nMore than just articles — these are open conversations about what really matters in the digital age.",
+  "emptyMessage": "No articles published yet — but stay tuned, fresh ideas are on the way!",
+  "subtitle": "Reflections, ideas, and experiments around technology, innovation, and creativity.",
+  "articles": [
+    {
+      "id": "1",
+      "title": "The Future of AI: Friend or Foe?",
+      "date": "2023-10-01",
+      "summary": "Exploring the impact of artificial intelligence on our lives and businesses.",
+      "content": "Artificial intelligence is transforming entire industries — from healthcare to entertainment. But how can we ensure its development remains ethical and beneficial for all? In this article, we explore the challenges and opportunities AI brings."
+    },
+    {
+      "id": "2",
+      "title": "Technology and Sustainability: A Path Forward",
+      "date": "2023-10-15",
+      "summary": "An overview of how technology can promote more sustainable practices.",
+      "content": "Sustainability is a crucial topic today. Technology offers powerful tools to reduce our environmental impact — from renewable energy to circular economy solutions. Here, we highlight inspiring examples and how we can be part of the change."
+    }
+  ],
+  "readMore": "Read more",
+  "seo": {
+    "title": "FWORKS Posts",
+    "description": "Explore posts about technology, AI ethics, innovation, and digital creativity.",
+    "keywords": "articles, technology, innovation, artificial intelligence, tech blog",
+    "ogImage": "/assets/og-articles-en.png"
+  }
+}

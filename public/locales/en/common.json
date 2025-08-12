@@ -1,8 +1,19 @@
 {
   "portfolio": "Portfolio",
   "about": "About",
-  "contact": "Contact",
-  "articles": "Articles",
-  "home-intro": "Um cantinho dentro da internet para falarmos justamente sobre ela: TECNOLOGIA",
-  "welcome": "Bem-vindo à FWORKS TECH"
+  "articles": "Blog",
+  "intro": "A little corner on the internet — born free — where ideas want to be free, code flows freely, and minds connect.",
+  "welcome": "Welcome to FWORKS",
+  "footer": {
+    "copyright": "&copy; {{year}} FWORKS.TECH. All rights reserved.",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "notFoundMessage": "Oops! What you're looking for doesn't exist or isn't what you expected.",
+  "goHome": "Go back to homepage",
+  "seo": {
+    "title": "Welcome to FWORKS",
+    "description": "A little corner on the internet — born free — where ideas want to be free, code flows freely, and minds connect.",
+    "keywords": "technology, fworks, blog, portfolio, AI, code",
+    "ogImage": "/assets/og-default-en.png"
+  }
 }

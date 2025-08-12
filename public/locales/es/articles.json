@@ -1,0 +1,30 @@
+{
+  "title": "Artículos",
+  "description": "Descubre los últimos artículos sobre tecnología, innovación y sostenibilidad.",
+  "intro": "Aquí comparto reflexiones y aprendizajes de mi camino por el mundo tech.\n\nMás que artículos — son conversaciones abiertas sobre lo que realmente importa en esta era digital.",
+  "emptyMessage": "Aún no hay artículos publicados — ¡pero estate atento, pronto llegarán nuevas ideas!",
+  "subtitle": "Reflexiones, ideas y experimentos sobre tecnología, innovación y creatividad.",
+  "articles": [
+    {
+      "id": "1",
+      "title": "El futuro de la IA: ¿amiga o enemiga?",
+      "date": "2023-10-01",
+      "summary": "Exploramos el impacto de la inteligencia artificial en nuestras vidas y negocios.",
+      "content": "La inteligencia artificial está transformando industrias enteras — desde la salud hasta el entretenimiento. Pero, ¿cómo podemos garantizar que su desarrollo sea ético y beneficioso para todos? En este artículo analizamos los desafíos y oportunidades de la IA."
+    },
+    {
+      "id": "2",
+      "title": "Tecnología y sostenibilidad: un camino hacia el futuro",
+      "date": "2023-10-15",
+      "summary": "Una mirada a cómo la tecnología puede fomentar prácticas más sostenibles.",
+      "content": "La sostenibilidad es un tema crucial hoy en día. La tecnología ofrece herramientas poderosas para reducir nuestro impacto ambiental — desde energías renovables hasta soluciones de economía circular. Aquí exploramos ejemplos inspiradores y cómo podemos contribuir al cambio."
+    }
+  ],
+  "readMore": "Leer más",
+  "seo": {
+    "title": "Artículos de FWORKS",
+    "description": "Explora artículos sobre tecnología, ética en la IA, innovación y creatividad digital.",
+    "keywords": "artículos, tecnología, innovación, inteligencia artificial, blog tech",
+    "ogImage": "/assets/og-articles-es.png"
+  }
+}

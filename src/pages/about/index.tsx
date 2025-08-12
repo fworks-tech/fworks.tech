@@ -1,38 +1,31 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { Section } from '@/lib/types';
+import { useTranslation } from 'next-i18next';
+
+import DefaultLayout from '@/components/layout/DefaultLayout';
+import SeoHead from '@/components/shared/SeoHead';
 import AboutFeature from '@/features/about/AboutFeature';
+import { getI18nProps } from '@/lib/i18n';
+import type { SeoMetadata } from '@/types/seo';
 
-const contentDir = path.join(process.cwd(), 'content/about');
-
-function getAboutSections(): Section[] {
-  const files = fs.readdirSync(contentDir);
-
-  return files
-    .map((filename) => {
-      const filePath = path.join(contentDir, filename);
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-      const { data, content } = matter(fileContent);
-
-      return {
-        id: data.id,
-        title: data.title,
-        image: data.image,
-        order: data.order,
-        content: content.trim(),
-      } as Section;
-    })
-    .sort((a, b) => a.order - b.order);
+export async function getStaticProps({ locale }: { locale: string }) {
+  return await getI18nProps(locale, ['about']);
 }
 
-export async function getStaticProps() {
-  const sections = getAboutSections();
-  return {
-    props: { sections },
-  };
+export default function AboutPage() {
+  const { t } = useTranslation('about');
+  const seo = t('seo', { returnObjects: true }) as SeoMetadata;
+  const content = t('carouselItems', { returnObjects: true }) as {
+    title: string;
+    content: string;
+    image?: string;
+  }[];
+
+  return (
+    <>
+      <SeoHead {...seo} url="https://fworks.tech/about" />
+      <AboutFeature content={content} />
+    </>
+  );
 }
 
-export default function About({ sections }: { sections: Section[] }) {
-  return <AboutFeature sections={sections} />;
-}
+// 🧩 Adiciona suporte ao layout dinâmico
+AboutPage.getLayout = (page: React.ReactNode) => <DefaultLayout>{page}</DefaultLayout>;
