@@ -24,8 +24,11 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
         priority
       />
 
-      <main className="flex h-full w-full p-8">
-        <div className="neon-border-shadow animate-fade-in max-w-8/12 align-center flex h-full w-full flex-1 flex-col justify-between p-4 sm:p-6">
+      <main className="flex h-full w-full items-center justify-center p-8">
+        <div
+          className="neon-border-shadow animate-fade-in max-w-8/12 align-center flex h-full w-full flex-1 flex-col justify-between p-4 sm:p-6"
+          style={{ overflow: 'auto' }}
+        >
           <Navbar />
           {children}
           <Footer />

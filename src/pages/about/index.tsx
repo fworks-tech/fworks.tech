@@ -22,9 +22,7 @@ export default function AboutPage() {
   return (
     <>
       <SeoHead {...seo} url="https://fworks.tech/about" />
-      <div className="flex h-full w-full flex-col items-center justify-center p-6 text-center sm:p-2">
-        <AboutFeature content={content} />
-      </div>
+      <AboutFeature content={content} />
     </>
   );
 }

@@ -15,10 +15,7 @@ export default function NeonScrollbarContainer({
   ...rest
 }: NeonScrollbarContainerProps) {
   return (
-    <div
-      className={clsx('scrollbar-neon max-h-[70vh] overflow-y-auto px-2 md:px-4', className)}
-      {...rest}
-    >
+    <div className={clsx(`scrollbar-neon`, className)} {...rest}>
       {children}
     </div>
   );

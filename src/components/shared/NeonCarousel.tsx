@@ -10,7 +10,10 @@ type Props = {
 
 export default function NeonCarousel({ sections, currentIndex, onSelect }: Props) {
   return (
-    <div className="mt-8 flex w-full items-center justify-end gap-4 px-6 md:px-4">
+    <div
+      className="mt-8 flex w-full items-center gap-4 px-6 md:px-4"
+      style={{ justifyContent: 'end' }}
+    >
       {sections?.map((_, index) => (
         <motion.div
           key={index}

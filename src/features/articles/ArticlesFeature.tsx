@@ -17,13 +17,15 @@ export default function ArticlesFeature({
   const currentContent = content[currentIndex];
 
   return (
-    <Card variant="borderless">
-      <section className="mx-4 mt-2 grid grid-cols-1 gap-2 md:grid-cols-[340px_1fr] md:px-12">
-        <NeonScrollbarContainer className="flex flex-col justify-center gap-4 text-center md:text-left">
-          <ArticlesContentSection title={currentContent?.title} content={currentContent?.content} />
-          <NeonCarousel sections={content} currentIndex={currentIndex} onSelect={setCurrentIndex} />
-        </NeonScrollbarContainer>
-      </section>
+    <Card
+      variant="borderless"
+      className="flex h-full flex-col items-center p-12"
+      style={{ paddingTop: 0 }}
+    >
+      <NeonScrollbarContainer className="flex flex-col justify-center gap-4 text-center md:text-left">
+        <ArticlesContentSection title={currentContent?.title} content={currentContent?.content} />
+        <NeonCarousel sections={content} currentIndex={currentIndex} onSelect={setCurrentIndex} />
+      </NeonScrollbarContainer>
     </Card>
   );
 }

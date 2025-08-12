@@ -18,17 +18,19 @@ export default function AboutFeature({
   const currentContent = content[currentIndex];
 
   return (
-    <Card variant="borderless">
-      <section className="flex h-full flex-col items-center justify-end md:px-12">
-        <div className="flex w-full flex-col items-center gap-4 md:flex-row md:px-8">
-          <ImageSection image={currentContent?.image} title={currentContent?.title} />
+    <Card
+      variant="borderless"
+      className="flex h-full flex-col items-center p-12"
+      style={{ paddingTop: 0 }}
+    >
+      <section className="flex w-full flex-col items-center gap-4 md:flex-row md:px-8">
+        <ImageSection image={currentContent?.image} title={currentContent?.title} />
 
-          <NeonScrollbarContainer className="flex flex-col justify-center gap-4 text-left md:text-left lg:flex-row">
-            <AboutContentSection content={currentContent} />
-          </NeonScrollbarContainer>
-        </div>
-        <NeonCarousel sections={content} currentIndex={currentIndex} onSelect={setCurrentIndex} />
+        <NeonScrollbarContainer className="flex flex-col justify-center gap-4 text-left">
+          <AboutContentSection content={[currentContent]} />
+        </NeonScrollbarContainer>
       </section>
+      <NeonCarousel sections={content} currentIndex={currentIndex} onSelect={setCurrentIndex} />
     </Card>
   );
 }
