@@ -5,10 +5,11 @@ import DefaultLayout from '@/components/layout/DefaultLayout';
 import SeoHead from '@/components/shared/SeoHead';
 import NeonLinkButton from '@/components/ui/NeonLinkButton';
 import { getI18nProps } from '@/lib/i18n';
+import { availableNamespaces } from '@/lib/i18nNamespaces';
 import type { SeoMetadata } from '@/types/seo';
 
 export async function getStaticProps({ locale }: { locale: string }) {
-  return await getI18nProps(locale);
+  return await getI18nProps(locale, Array.from(availableNamespaces));
 }
 
 export default function HomePage() {

@@ -1,31 +1,46 @@
 import { NextResponse, type NextRequest } from 'next/server';
 
-const PUBLIC_FILE = /\.(.*)$/;
-const SUPPORTED_LOCALES = ['en', 'pt', 'es', 'fr', 'de'];
-const DEFAULT_LOCALE = 'en';
+const SUPPORTED = ['en', 'pt', 'es', 'de', 'fr'] as const;
+type Locale = (typeof SUPPORTED)[number];
+const DEFAULT: Locale = 'en';
+
+function isSupported(value: unknown): value is Locale {
+  return typeof value === 'string' && (SUPPORTED as readonly string[]).includes(value);
+}
+
+function getCookieLocale(req: NextRequest): Locale | null {
+  const c = req.cookies.get('locale')?.value ?? req.cookies.get('NEXT_LOCALE')?.value;
+  return isSupported(c) ? c : null;
+}
+
+function getHeaderLocale(req: NextRequest): Locale | null {
+  const header = req.headers.get('accept-language') ?? '';
+  const preferred = header.split(',')[0]?.toLowerCase() ?? '';
+  const base = preferred.split('-')[0] ?? '';
+  return isSupported(base) ? base : null;
+}
+
+function pathHasLocale(pathname: string): boolean {
+  const firstSeg = pathname.split('/').filter(Boolean)[0] ?? '';
+  return isSupported(firstSeg);
+}
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (pathname.startsWith('/_next') || pathname.startsWith('/api') || PUBLIC_FILE.test(pathname)) {
+  if (pathname.startsWith('/_next') || pathname.startsWith('/api') || pathname.includes('.')) {
     return NextResponse.next();
   }
 
-  const hasLocale = SUPPORTED_LOCALES.some(
-    (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`)
-  );
-  if (hasLocale) return NextResponse.next();
+  if (pathHasLocale(pathname)) return NextResponse.next();
 
-  // pega do cookie do Next ou do header
-  const cookieLocale = req.cookies.get('NEXT_LOCALE')?.value;
-  const headerLocale = req.headers.get('accept-language')?.split(',')[0].split('-')[0];
-  const locale = SUPPORTED_LOCALES.includes(cookieLocale || '')
-    ? cookieLocale!
-    : SUPPORTED_LOCALES.includes(headerLocale || '')
-      ? headerLocale!
-      : DEFAULT_LOCALE;
+  const locale: Locale = getCookieLocale(req) ?? getHeaderLocale(req) ?? DEFAULT;
 
-  return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
+  const url = req.nextUrl.clone();
+  url.pathname = `/${locale}${pathname}`;
+  return NextResponse.redirect(url);
 }
 
-export const config = { matcher: ['/((?!_next|api|.*\\..*).*)'] };
+export const config = {
+  matcher: ['/((?!_next|api|.*\\..*).*)']
+};

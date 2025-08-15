@@ -8,7 +8,7 @@ import Navbar from '../navbar';
 import Loading from '../ui/Loading';
 
 export default function BaseLayout({ children, ...rest }: LayoutProps) {
-  const { ready } = useTranslation();
+  const { ready } = useTranslation('common');
 
   if (!ready) return <Loading />;
 
