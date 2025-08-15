@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "target": "es2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "moduleResolution": "bundler",
+    "module": "esnext"
+  },
+  "include": ["src/scripts/**/*"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}

@@ -1,0 +1,7 @@
+<type>(<scope>): <short summary> (#<issue>)
+
+<body - provide more context if necessary. Explain what and why, not how. Wrap lines at 72 characters.>
+
+<footer - use "Closes #<issue>" if you want GitHub to automatically close it>
+
+check: https://github.com/conventional-changelog/commitlint/#what-is-commitlint

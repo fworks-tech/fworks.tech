@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import Navbar from '../navbar';
+
 import Footer from '../footer';
+import Navbar from '../navbar';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,7 +9,7 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative min-h-screen w-screen flex flex-col">
+    <div className="relative flex flex-col">
       {/* Background */}
       <div className="fixed inset-0 -z-10">
         <Image
@@ -21,10 +22,10 @@ export default function Layout({ children }: LayoutProps) {
       </div>
 
       {/* Neon Border Card */}
-      <main role="main" className="flex justify-center items-center px-4 sm:px-8 h-screen w-screen">
-        <div className="relative w-screen max-w-9/12 flex flex-col min-h-8/12 p-6 sm:p-8 border-4 rounded-2xl border-cyan-400 shadow-[0_0_40px_10px_#00ccff,0_0_80px_20px_#9ae7ff] animate-fade-in neon-border">
+      <main role="main" className="flex h-screen w-screen items-center justify-center px-4 sm:px-8">
+        <div className="max-w-9/12 min-h-8/12 animate-fade-in neon-border-shadow relative flex flex-col">
           <Navbar />
-          <section className="my-8 sm:px-8 flex flex-col flex-auto items-center justify-center text-center">
+          <section className="my-8 flex flex-auto flex-col items-center justify-center text-center sm:px-8">
             {children}
           </section>
           <Footer />

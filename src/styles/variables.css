@@ -1,0 +1,6 @@
+:root {
+  --color-neon: #00f7ff;
+  --scrollbar-thumb: var(--color-neon);
+  --scrollbar-track: transparent;
+  --scrollbar-width: 8px;
+}

@@ -1,14 +1,38 @@
-export default function Card({ children }: { children: React.ReactNode }) {
+import * as React from 'react';
+
+type CardVariant = 'default' | 'borderless';
+
+type CardProps = React.HTMLAttributes<HTMLDivElement> & {
+  children: React.ReactNode;
+  variant?: CardVariant;
+  className?: string;
+  sx?: React.CSSProperties;
+};
+
+export default function Card({
+  children,
+  variant = 'default',
+  className = '',
+  sx,
+  style,
+  ...rest
+}: CardProps) {
+  const variants: Record<CardVariant, string> = {
+    default: `
+      border-4 rounded-2xl
+      neon-border-shadow
+    `,
+    borderless: ``
+  };
+
+  const base = 'animate-fade-in relative mx-auto';
+  const mergedStyle = sx || style ? { ...style, ...sx } : undefined;
+
   return (
     <div
-      className="
-                relative w-full max-w-4xl mx-auto p-6 sm:p-8
-                border-4 rounded-2xl
-                border-cyan-400
-                shadow-[0_0_40px_10px_#00ccff,0_0_80px_20px_#9ae7ff]
-                animate-fade-in
-                neon-border
-            "
+      className={[base, variants[variant], className].filter(Boolean).join(' ')}
+      style={mergedStyle}
+      {...rest}
     >
       {children}
     </div>

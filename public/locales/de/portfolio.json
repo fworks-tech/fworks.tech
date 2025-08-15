@@ -1,0 +1,31 @@
+{
+  "title": "Portfolio",
+  "subtitle": "Projekte, die meinen Weg als Entwickler und digitaler Schöpfer geprägt haben.",
+  "intro": "Hier sind einige der bedeutendsten Arbeiten, an denen ich beteiligt war — von vollständigen Produkten bis hin zu kreativen Lösungen für reale technologische Herausforderungen.\n\nJedes Projekt erzählt eine Geschichte, steht für ein überwundenes Hindernis und markiert einen weiteren Schritt in meiner beruflichen Entwicklung.",
+  "emptyMessage": "Noch keine Projekte hinzugefügt — aber bald wird dieser Bereich voller lebendiger Ideen sein.",
+  "portfolio": [
+    {
+      "id": "1",
+      "title": "Lorem Ipsum Dolor",
+      "date": "2023-01-15",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "content": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": "2",
+      "title": "Ut Enim Ad Minim",
+      "date": "2023-05-10",
+      "summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
+  "seeAll": "Alle ansehen",
+  "backToHome": "Zur Startseite",
+  "backToPortfolio": "Zurück zum Portfolio",
+  "seo": {
+    "title": "Portfolio | FWORKS",
+    "description": "Sieh dir die von FWORKS entwickelten Projekte an — kreative Lösungen mit echtem Impact.",
+    "keywords": "portfolio, projekte, entwickler, technologie, fworks",
+    "ogImage": "/assets/og-portfolio-de.png"
+  }
+}
