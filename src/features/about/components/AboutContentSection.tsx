@@ -3,7 +3,11 @@
 import { motion } from 'framer-motion';
 
 type ContentProps = {
-  content: { title: string; content: string; image?: string }[];
+  content: {
+    title: string;
+    content: string;
+    image?: string;
+  }[];
 };
 
 export default function AboutContentSection({ content }: ContentProps) {
@@ -15,7 +19,10 @@ export default function AboutContentSection({ content }: ContentProps) {
           className="flex max-w-5xl flex-col items-center justify-center gap-4 md:flex-row"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.6, duration: 0.5 }}
+          transition={{
+            delay: index * 0.6,
+            duration: 0.5
+          }}
         >
           <motion.div
             className="flex flex-col justify-center gap-4 md:text-left"

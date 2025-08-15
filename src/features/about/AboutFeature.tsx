@@ -12,7 +12,11 @@ import ImageSection from './components/ImageSection';
 export default function AboutFeature({
   content
 }: {
-  content: { title: string; content: string; image?: string }[];
+  content: {
+    title: string;
+    content: string;
+    image?: string;
+  }[];
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentContent = content[currentIndex];

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "siem-future",
+    "slug": "siem-future",
+    "defaultLocale": "pt",
+    "tags": ["SIEM", "Cybersecurity", "Cloud", "SOAR", "AI", "IoT", "Security Automation"],
+    "translations": [
+      {
+        "locale": "pt",
+        "title": "O Futuro das Ferramentas SIEM: Da Análise Manual à Automação Inteligente na Nuvem",
+        "description": "Explore como o SIEM está evoluindo com nuvem, automação, SOAR, IA e IoT para enfrentar ameaças cibernéticas modernas.",
+        "path": "/articles/siem-future/pt.md",
+        "date": "2025-08-12"
+      },
+      {
+        "locale": "en",
+        "title": "The Future of SIEM Tools: From Manual Analysis to Intelligent Cloud Automation",
+        "description": "Discover how SIEM is evolving with cloud, automation, SOAR, AI, and IoT to tackle modern cybersecurity threats.",
+        "path": "/articles/siem-future/en.md",
+        "date": "2025-08-12"
+      },
+      {
+        "locale": "es",
+        "title": "El Futuro de las Herramientas SIEM: Del Análisis Manual a la Automatización Inteligente en la Nube",
+        "description": "Descubre cómo SIEM evoluciona con la nube, la automatización, SOAR, IA e IoT para enfrentar las amenazas cibernéticas modernas.",
+        "path": "/articles/siem-future/es.md",
+        "date": "2025-08-12"
+      },
+      {
+        "locale": "de",
+        "title": "Die Zukunft von SIEM-Tools: Von manueller Analyse zur intelligenten Cloud-Automatisierung",
+        "description": "Erfahren Sie, wie sich SIEM mit Cloud, Automatisierung, SOAR, KI und IoT entwickelt, um modernen Cyberbedrohungen zu begegnen.",
+        "path": "/articles/siem-future/de.md",
+        "date": "2025-08-12"
+      },
+      {
+        "locale": "fr",
+        "title": "L'Avenir des Outils SIEM : De l'Analyse Manuelle à l'Automatisation Intelligente dans le Cloud",
+        "description": "Découvrez comment le SIEM évolue avec le cloud, l'automatisation, SOAR, l'IA et l'IoT pour relever les menaces de cybersécurité modernes.",
+        "path": "/articles/siem-future/fr.md",
+        "date": "2025-08-12"
+      }
+    ]
+  }
+]

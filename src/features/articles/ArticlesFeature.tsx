@@ -11,7 +11,11 @@ import ArticlesContentSection from './components/ArticlesContentSection';
 export default function ArticlesFeature({
   content
 }: {
-  content: { title: string; content: string; image?: string }[];
+  content: {
+    title: string;
+    content: string;
+    image?: string;
+  }[];
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentContent = content[currentIndex];
