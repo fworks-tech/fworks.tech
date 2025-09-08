@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <SeoHead {...seo} url="https://fworks.tech/" />
-      <section className="h-full w-full p-6 sm:p-8" style={{ marginTop: '8rem' }}>
+      <section className="h-full w-full p-6 sm:p-8 mt-32">
         <div className="flex h-12 flex-auto flex-col items-center justify-center gap-4 text-center">
           <motion.h1
             className="light-neon-text text-center text-5xl font-semibold tracking-tight sm:text-4xl"
