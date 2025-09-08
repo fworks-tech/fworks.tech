@@ -23,11 +23,11 @@ export default function AboutInteractive({
   const currentContent = content[currentIndex];
 
   return (
-    <Card variant="borderless" className="flex h-full flex-col items-center justify-center p-12">
-      <section className="flex w-full flex-col items-center justify-center gap-8 md:flex-row md:px-8">
+    <Card variant="borderless" className="flex h-full min-h-full flex-col p-12 sm:p-4 sm:py-4">
+      <section className="flex h-full w-full flex-col items-center justify-start gap-10 md:flex-row md:px-8">
         <ImageSection image={currentContent?.image} title={currentContent?.title} />
 
-        <div className="relative flex h-[60vh] w-full max-w-5xl flex-col items-center justify-evenly gap-6 md:h-[36vh]">
+        <div className="relative flex w-full max-w-5xl flex-col gap-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
