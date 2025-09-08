@@ -33,9 +33,9 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
           style={{ overflow: 'auto' }}
         >
           <Navbar />
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout" initial={false} key={router.asPath}>
             <motion.div
-              className="h-full overflow-hidden"
+              className="h-full overflow-y-clip"
               key={router.asPath}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
