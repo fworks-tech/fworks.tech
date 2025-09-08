@@ -5,7 +5,7 @@
   "intro": "A little corner of the internet — born free — where ideas want to be free, code flows openly, and minds connect.",
   "welcome": "Welcome to FWORKS",
   "footer": {
-    "copyright": "&copy; {{year}} FWORKS.TECH. All rights reserved.",
+    "copyright": "{{year}} FWORKS.TECH. All rights reserved.",
     "privacyPolicy": "Privacy Policy"
   },
   "notFoundMessage": "Oops! What you're looking for doesn't exist or isn't what you expected.",
