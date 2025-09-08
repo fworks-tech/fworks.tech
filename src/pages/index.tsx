@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <SeoHead {...seo} url="https://fworks.tech/" />
-      <section className="h-full w-full p-6 sm:p-8" style={{ marginTop: '4rem' }}>
+      <section className="h-full w-full p-6 sm:p-8" style={{ marginTop: '6rem' }}>
         <div className="flex h-12 flex-auto flex-col items-center justify-center gap-4 text-center">
           <motion.h1
             className="light-neon-text text-center text-5xl font-semibold tracking-tight sm:text-4xl"
@@ -39,15 +39,8 @@ export default function HomePage() {
             {t('intro')}
           </motion.p>
 
-          <motion.div
-            className="animate-bounce cursor-pointer"
-            onClick={() => {
-              const about = document.getElementById('about');
-              if (about) about.scrollIntoView({ behavior: 'smooth' });
-            }}
-            whileHover={{ scale: 1.2 }}
-          >
-            <NeonLinkButton href="/about" label={t('about')} />
+          <motion.div className="animate-bounce cursor-pointer" whileHover={{ scale: 1.2 }}>
+            <NeonLinkButton href="/about" label={t('letsGo')} />
           </motion.div>
         </div>
       </section>
