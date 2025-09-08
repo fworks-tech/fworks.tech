@@ -1236,7 +1236,6 @@ video {
 }
 
 /* Adjust carousel dots position and active glow */
-
 /* Make carousel dots visible even when not active */
 .neon-carousel-dot {
   background-color: rgba(228, 153, 255, 0.14); /* increased visibility */
