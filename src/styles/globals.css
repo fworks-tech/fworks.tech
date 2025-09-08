@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Preserve custom neon styles and scrollbar from the previous globals file */
+
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
@@ -1229,8 +1235,47 @@ video {
   border-radius: 1rem;
 }
 
-.neon-carrosel-nav-icon-active {
+/* Adjust carousel dots position and active glow */
+/* Make carousel dots visible even when not active */
+.neon-carousel-dot {
+  background-color: rgba(228, 153, 255, 0.14); /* increased visibility */
+  border: 1px solid rgba(228, 153, 255, 0.28);
+  box-shadow:
+    0 0 6px rgba(228, 153, 255, 0.06),
+    inset 0 0 6px rgba(0, 204, 255, 0.08);
+  backdrop-filter: blur(1px);
+}
+
+/* Active dot pulse animation (subtle glow, does not move the dot) */
+@keyframes neon-pulse {
+  0% {
+    box-shadow:
+      0 0 6px rgba(0, 204, 255, 0.28),
+      0 0 14px rgba(0, 204, 255, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 12px rgba(0, 204, 255, 0.48),
+      0 0 24px rgba(0, 204, 255, 0.22);
+  }
+  100% {
+    box-shadow:
+      0 0 8px rgba(0, 204, 255, 0.36),
+      0 0 18px rgba(0, 204, 255, 0.18);
+  }
+}
+
+.neon-carousel-nav-icon-active {
   background-color: #00ccff;
+  animation: neon-pulse 1.8s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+@media (min-width: 768px) {
+  /* lift the dots a bit on md+ to be closer to content */
+  .neon-carousel-container {
+    margin-top: -1.25rem;
+  }
 }
 
 .neon-text {

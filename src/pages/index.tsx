@@ -5,10 +5,11 @@ import DefaultLayout from '@/components/layout/DefaultLayout';
 import SeoHead from '@/components/shared/SeoHead';
 import NeonLinkButton from '@/components/ui/NeonLinkButton';
 import { getI18nProps } from '@/lib/i18n';
+import { availableNamespaces } from '@/lib/i18nNamespaces';
 import type { SeoMetadata } from '@/types/seo';
 
 export async function getStaticProps({ locale }: { locale: string }) {
-  return await getI18nProps(locale);
+  return await getI18nProps(locale, Array.from(availableNamespaces));
 }
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <SeoHead {...seo} url="https://fworks.tech/" />
-      <section className="h-full w-full p-6 sm:p-8" style={{ marginTop: '4rem' }}>
+      <section className="mt-32 h-full w-full p-6 sm:p-8">
         <div className="flex h-12 flex-auto flex-col items-center justify-center gap-4 text-center">
           <motion.h1
             className="light-neon-text text-center text-5xl font-semibold tracking-tight sm:text-4xl"
@@ -38,15 +39,8 @@ export default function HomePage() {
             {t('intro')}
           </motion.p>
 
-          <motion.div
-            className="animate-bounce cursor-pointer"
-            onClick={() => {
-              const about = document.getElementById('about');
-              if (about) about.scrollIntoView({ behavior: 'smooth' });
-            }}
-            whileHover={{ scale: 1.2 }}
-          >
-            <NeonLinkButton href="/about" label={t('about')} />
+          <motion.div className="animate-bounce cursor-pointer" whileHover={{ scale: 1.2 }}>
+            <NeonLinkButton href="/about" label={t('letsGo')} />
           </motion.div>
         </div>
       </section>

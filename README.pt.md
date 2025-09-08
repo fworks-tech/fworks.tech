@@ -1,6 +1,7 @@
 # FWORKS.tech – Portfólio de Desenvolvedor Sênior
 
-Este projeto é um portfólio pessoal construído com as tecnologias modernas mais requisitadas no mercado internacional, com foco em performance, escalabilidade e design limpo.
+FWORKS.tech é o meu canto na internet — um lugar onde minha marca, ideias e projetos se unem para
+inspirar, conectar e moldar como a tecnologia impacta o dia a dia.
 
 ## 🚀 Tecnologias Utilizadas
 

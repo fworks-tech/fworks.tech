@@ -1,0 +1,1 @@
+export { MDArticle } from './MDArticle';

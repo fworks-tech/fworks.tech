@@ -2,23 +2,44 @@
   "carouselItems": [
     {
       "id": "intro",
-      "title": "Qu'est-ce que FWORKS ?",
-      "image": "/assets/icons/idea-2.png",
+      "title": "Qu'est-ce que FWORKS?",
+      "image": "/assets/imgs/me-transparent.webp",
       "order": 1,
-      "content": "FWORKS TECH est avant tout un espace personnel. Ceux qui me connaissent savent que je travaille et étudie dans le domaine des technologies de l'information depuis plus de dix ans.\n\nMon idée ici est de partager ce que j’ai appris au fil des années et de le relier au monde dans lequel nous vivons aujourd’hui. Et surtout, je ne cherche aucun retour financier pour ce que je partage ici.\n\nInternet est un espace vaste — et pour toujours LIBRE — plein de possibilités. Je veux que cet endroit en soit le reflet : là où la technologie rencontre la liberté pour transformer les idées en réalité."
+      "content": "FWORKS TECH est simplement mon espace personnel. Pour ceux qui me connaissent, j’étudie et je travaille dans le domaine des technologies de l’information depuis près d’une décennie. Et pour ceux qui ne me connaissent pas encore ? Laissez-moi me présenter."
     },
     {
-      "id": "mission",
-      "title": "Mais alors, quelle est l’idée ?",
-      "image": "/assets/icons/mission.png",
+      "id": "who-i-am",
+      "title": "Qui suis-je?",
+      "image": "/assets/imgs/me-transparent.webp",
       "order": 2,
-      "content": "L’idée est de maintenir cet espace vivant avec du contenu, des réflexions et des projets qui aident les gens à comprendre — de manière accessible et sans but commercial — ce qui se cache derrière les transformations numériques qui nous entourent.\n\nBeaucoup de gens s’inquiètent de l’avancée technologique, mais peu la comprennent vraiment — et encore moins savent comment en tirer profit.\n\nIci, je veux construire des ponts entre le monde numérique et la vie réelle. Montrer qu’il est possible de s’approprier la technologie, de l’utiliser en toute conscience et d’en faire une véritable alliée — aujourd’hui et dans le futur que nous construisons ensemble."
+      "content": "Je suis un passionné de technologie, avide d’apprendre et de partager mes connaissances. Mon parcours a commencé par la curiosité et a évolué vers une carrière dédiée au développement de solutions créatives et impactantes. Au-delà du rôle de programmeur, je crois au pouvoir de la technologie pour transformer des vies et connecter les gens."
+    },
+    {
+      "id": "professional-history",
+      "title": "Mon Parcours Professionnel",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 3,
+      "content": "Au cours des dernières années, j’ai eu l’opportunité de travailler sur des projets impliquant le développement logiciel, la gestion d’équipes et des solutions technologiques innovantes. J’ai commencé par de petits projets, qui ont évolué vers des défis plus importants me permettant de grandir en tant que professionnel et en tant que personne."
+    },
+    {
+      "id": "skills-certifications",
+      "title": "Technologies, Formation et Certifications",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 4,
+      "content": "Je suis spécialisé dans des technologies comme React, Next.js, Tailwind CSS et Node.js. J’ai également obtenu des certifications en développement web, architecture logicielle et méthodologies agiles. Ma formation académique et mes cours complémentaires m’ont donné une base solide pour relever les défis du marché."
+    },
+    {
+      "id": "future-perspective",
+      "title": "Perspectives d’Avenir",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 5,
+      "content": "Ma vision pour l’avenir est de continuer à explorer de nouvelles technologies, contribuer à des projets ayant un impact positif sur le monde et aider à construire un environnement numérique plus inclusif et innovant. Je crois que la technologie est un outil puissant pour transformer les idées en réalité."
     }
   ],
   "seo": {
     "title": "À propos de FWORKS",
-    "description": "Découvrez la mission et l'origine de FWORKS TECH — connecter innovation, personnes et sens.",
-    "keywords": "fworks, mission, technologie, innovation, à propos",
+    "description": "Découvrez la mission et l’origine de FWORKS TECH — en connectant innovation, personnes et objectif.",
+    "keywords": "about, fworks, tech, technologie, dev, programmation",
     "ogImage": "/assets/og-about-fr.png"
   }
 }

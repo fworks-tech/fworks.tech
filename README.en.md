@@ -1,6 +1,7 @@
 # FWORKS.tech – Senior Developer Portfolio
 
-This project is a personal portfolio built with the most in-demand modern technologies in the international market, focused on performance, scalability, and clean design.
+FWORKS.tech is my corner of the internet — a place where my brand, ideas, and projects come together
+to inspire, connect, and shape how technology impacts everyday life.
 
 ## 🚀 Technologies Used
 

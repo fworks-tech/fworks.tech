@@ -1,6 +1,4 @@
 // src/components/shared/NeonScrollbarContainer.tsx
-'use client';
-
 import clsx from 'clsx';
 import type { ReactNode, HTMLAttributes } from 'react';
 
@@ -15,7 +13,7 @@ export default function NeonScrollbarContainer({
   ...rest
 }: NeonScrollbarContainerProps) {
   return (
-    <div className={clsx(`scrollbar-neon`, className)} {...rest}>
+    <div className={clsx('scrollbar-neon max-h-[60vh] overflow-auto', className)} {...rest}>
       {children}
     </div>
   );
