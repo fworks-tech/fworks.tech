@@ -1235,7 +1235,7 @@ video {
   border-radius: 1rem;
 }
 
-.neon-carrosel-nav-icon-active {
+.neon-carousel-nav-icon-active {
   background-color: #00ccff;
 }
 
@@ -1253,7 +1253,7 @@ video {
   backdrop-filter: blur(1px);
 }
 
-.neon-carrosel-nav-icon-active {
+.neon-carousel-nav-icon-active {
   background-color: #00ccff;
   box-shadow:
     0 0 8px rgba(0, 204, 255, 0.6),
@@ -1281,7 +1281,7 @@ video {
   }
 }
 
-.neon-carrosel-nav-icon-active {
+.neon-carousel-nav-icon-active {
   animation: neon-pulse 1.8s ease-in-out infinite;
   will-change: box-shadow;
 }

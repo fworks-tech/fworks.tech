@@ -20,7 +20,7 @@ export default function NeonCarousel({ sections, currentIndex, onSelect }: Props
             key={index}
             onClick={() => onSelect(index)}
             className={`neon-border neon-carousel-dot h-4 w-4 cursor-pointer rounded-full ${
-              isActive ? 'neon-carrosel-nav-icon-active' : ''
+              isActive ? 'neon-carousel-nav-icon-active' : ''
             }`}
             initial={{ opacity: 0 }}
             animate={animateProps}
