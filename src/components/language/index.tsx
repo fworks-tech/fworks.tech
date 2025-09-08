@@ -36,7 +36,7 @@ export default function Language() {
           try {
             i18n.changeLanguage(match.code);
           } catch (e) {
-            // Log but don't throw — keep Fast Refresh from failing due to this
+            // Log but don't throw — prevent app from crashing during language change
             console.error('i18n.changeLanguage failed during init', e);
           }
           try {
