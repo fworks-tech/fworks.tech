@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer
-      className={`mb-4 flex flex-col items-center justify-center py-6 text-center text-sm text-cyan-400 sm:text-base md:text-lg`}
+      className="mb-4 flex flex-col items-center justify-center py-6 text-center text-sm text-cyan-400 sm:text-base md:text-lg"
     >
       <p>
         © <span>{t('footer.copyright', { year })}</span>
