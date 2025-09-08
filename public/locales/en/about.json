@@ -3,22 +3,43 @@
     {
       "id": "intro",
       "title": "What is FWORKS?",
-      "image": "/assets/icons/idea-2.png",
+      "image": "/assets/imgs/me-transparent.webp",
       "order": 1,
-      "content": "FWORKS TECH is, above all, a personal space. For those who know me, I've been studying and working in the field of Information Technology for over a decade.\n\nMy idea here is to share what I’ve learned during this journey and connect it with the world we live in today. Most importantly, I have no intention of making a single cent from the content I share here.\n\nThe internet is a vast — and forever FREE — space full of possibilities. I want this place to reflect that: where technology and freedom meet to turn ideas into reality."
+      "content": "FWORKS TECH is simply my personal space. For those who know me, I’ve been studying and working in the field of Information Technology for almost a decade. But what about those who don’t know me yet? Let me introduce myself."
     },
     {
-      "id": "mission",
-      "title": "So what’s the idea?",
-      "image": "/assets/icons/mission.png",
+      "id": "who-i-am",
+      "title": "Who am I?",
+      "image": "/assets/imgs/me-transparent.webp",
       "order": 2,
-      "content": "The idea is to keep this space alive with content, reflections, and projects that help people understand — in an accessible and non-commercial way — what’s behind the digital transformations shaping our lives.\n\nMany people worry about how fast technology is evolving, but few actually understand it — and even fewer know how to make it work for them.\n\nHere, I want to build bridges between the digital world and everyday life. To show that yes, it’s possible to embrace technology, use it consciously, and make it a true ally — now and in the future we’re shaping together."
+      "content": "I’m a technology enthusiast, passionate about learning and sharing knowledge. My journey started with curiosity and evolved into a career dedicated to developing creative and impactful solutions. Beyond being a programmer, I believe in the power of technology to transform lives and connect people."
+    },
+    {
+      "id": "professional-history",
+      "title": "Professional Background",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 3,
+      "content": "Over the past years, I’ve had the opportunity to work on projects involving software development, team management, and innovative technological solutions. My path began with small projects and evolved into greater challenges that allowed me to grow both as a professional and as a person."
+    },
+    {
+      "id": "skills-certifications",
+      "title": "Technologies, Education, and Certifications",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 4,
+      "content": "I specialize in technologies like React, Next.js, Tailwind CSS, and Node.js. I also hold certifications in web development, software architecture, and agile methodologies. My academic background and complementary courses have given me a solid foundation to face market challenges."
+    },
+    {
+      "id": "future-perspective",
+      "title": "Future Perspective",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 5,
+      "content": "My vision for the future is to keep exploring new technologies, contributing to projects that positively impact the world, and helping build a more inclusive and innovative digital environment. I believe technology is a powerful tool to turn ideas into reality."
     }
   ],
   "seo": {
     "title": "About FWORKS",
-    "description": "Discover what FWORK is and what we want connecting innovation, people, and ideas for the future and technology.",
-    "keywords": "about, fworks, mission, technology, innovation",
+    "description": "Discover the mission and origins of FWORKS TECH — connecting innovation, people, and purpose.",
+    "keywords": "about, fworks, tech, technology, dev, programming",
     "ogImage": "/assets/og-about-en.png"
   }
 }

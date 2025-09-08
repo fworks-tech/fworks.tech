@@ -34,11 +34,12 @@ export default function ImageSection({ image, title }: Props) {
     >
       <Image
         src={image}
-        alt={title || 'Image'}
+        alt={title || 'Profile image'}
         priority
-        height={isMobile ? 192 : 420}
-        width={isMobile ? 192 : 420}
-        style={{ position: 'relative' }}
+        height={isMobile ? 220 : 420}
+        width={isMobile ? 220 : 420}
+        className="neon-border-shadow rounded-full opacity-80"
+        style={{ borderRadius: '50%' }}
       />
     </motion.div>
   );

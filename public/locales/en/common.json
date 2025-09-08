@@ -2,18 +2,22 @@
   "portfolio": "Portfolio",
   "about": "About",
   "articles": "Blog",
-  "intro": "A little corner on the internet — born free — where ideas want to be free, code flows freely, and minds connect.",
+  "intro": "A little corner of the internet — born free — where ideas want to be free, code flows openly, and minds connect.",
   "welcome": "Welcome to FWORKS",
   "footer": {
     "copyright": "&copy; {{year}} FWORKS.TECH. All rights reserved.",
     "privacyPolicy": "Privacy Policy"
   },
   "notFoundMessage": "Oops! What you're looking for doesn't exist or isn't what you expected.",
-  "goHome": "Go back to homepage",
+  "goHome": "Go back to the homepage",
+  "letsGo": "Let's go!",
+  "seeMore": "See more",
+  "seeLess": "See less",
+  "back": "Back",
   "seo": {
     "title": "Welcome to FWORKS",
-    "description": "A little corner on the internet — born free — where ideas want to be free, code flows freely, and minds connect.",
-    "keywords": "technology, fworks, blog, portfolio, AI, code",
+    "description": "A little corner of the internet — born free — where ideas want to be free, code flows openly, and minds connect.",
+    "keywords": "technology, fworks, articles, portfolio, AI, code",
     "ogImage": "/assets/og-default-en.png"
   }
 }

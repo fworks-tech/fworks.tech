@@ -29,7 +29,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between bg-transparent p-12 md:justify-start md:p-8">
+    <nav className="flex items-center justify-between bg-transparent p-12 md:p-8">
       <Logo />
 
       {isMobile ? (

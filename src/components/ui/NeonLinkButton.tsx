@@ -2,11 +2,16 @@ import { motion } from 'framer-motion';
 import type { LinkProps } from 'next/link';
 import Link from 'next/link';
 
-type NeonButtonProps = LinkProps & {
+type NeonLinkButtonProps = LinkProps & {
   label: React.ReactNode;
 };
 
-export default function NeonLinkButton({ label, ...rest }: NeonButtonProps) {
+/* NeonLinkButton renders a neon-styled animated link button.
+ *
+ * @param {NeonButtonProps} props - Props extending LinkProps with a label for the button.
+ * @returns {JSX.Element} The neon link button component.
+ */
+export default function NeonLinkButton({ label, ...rest }: NeonLinkButtonProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
@@ -16,9 +21,8 @@ export default function NeonLinkButton({ label, ...rest }: NeonButtonProps) {
         padding: '1rem'
       }}
     >
-      <Link className="light-neon-text m-4 flex flex-1 font-semibold" {...rest}>
-        {label}
-        <span aria-hidden className="light-neon-text m-4 flex flex-1 font-semibold" />
+      <Link {...rest}>
+        <span className="light-neon-text m-1 flex flex-1 font-semibold">{label}</span>
       </Link>
     </motion.div>
   );

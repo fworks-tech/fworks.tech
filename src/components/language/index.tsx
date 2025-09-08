@@ -20,17 +20,34 @@ export default function Language() {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // 🔁 Detectar idioma na primeira visita
   useEffect(() => {
-    const storedLang = localStorage.getItem('lang');
-    const browserLang = navigator.language.split('-')[0];
+    if (typeof window === 'undefined') return;
 
-    if (!storedLang && browserLang && i18n.language !== browserLang) {
-      const match = languages.find((lang) => lang.code === browserLang);
-      if (match) {
-        i18n.changeLanguage(match.code);
-        localStorage.setItem('lang', match.code);
+    try {
+      const storedLang = typeof localStorage !== 'undefined' ? localStorage.getItem('lang') : null;
+      const navLang =
+        typeof navigator !== 'undefined' && navigator.language
+          ? navigator.language.split('-')[0]
+          : null;
+
+      if (!storedLang && navLang && i18n.language !== navLang) {
+        const match = languages.find((lang) => lang.code === navLang);
+        if (match) {
+          try {
+            i18n.changeLanguage(match.code);
+          } catch (e) {
+            // Log but don't throw — keep Fast Refresh from failing due to this
+            console.error('i18n.changeLanguage failed during init', e);
+          }
+          try {
+            localStorage.setItem('lang', match.code);
+          } catch (e) {
+            console.error('localStorage.setItem failed during init', e);
+          }
+        }
       }
+    } catch (e) {
+      console.error('language init effect failed', e);
     }
   }, [i18n]);
 
@@ -59,10 +76,19 @@ export default function Language() {
 
   // 🌍 Trocar idioma, persistir e forçar reload
   const changeLanguage = async (code: string) => {
-    await i18n.changeLanguage(code);
-    localStorage.setItem('lang', code);
+    try {
+      await i18n.changeLanguage(code);
+    } catch (e) {
+      console.error('i18n.changeLanguage failed', e);
+    }
+
+    try {
+      if (typeof window !== 'undefined') localStorage.setItem('lang', code);
+    } catch (e) {
+      console.error('localStorage.setItem failed', e);
+    }
+
     setIsOpen(false);
-    await i18n.changeLanguage(code);
     router.replace(router.pathname, router.asPath, { locale: code });
   };
 
