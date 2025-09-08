@@ -16,9 +16,8 @@ export default function NeonLinkButton({ label, ...rest }: NeonButtonProps) {
         padding: '1rem'
       }}
     >
-      <Link className="light-neon-text m-4 flex flex-1 font-semibold" {...rest}>
+      <Link className="light-neon-text m-1 flex flex-1 font-semibold" {...rest}>
         {label}
-        <span aria-hidden className="light-neon-text m-4 flex flex-1 font-semibold" />
       </Link>
     </motion.div>
   );
