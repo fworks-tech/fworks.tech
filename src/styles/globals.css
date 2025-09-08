@@ -1235,7 +1235,6 @@ video {
   border-radius: 1rem;
 }
 
-
 /* Adjust carousel dots position and active glow */
 .neon-border.rounded-full {
   /* ensure dots have subtle inner glow */
@@ -1248,15 +1247,6 @@ video {
   border: 1px solid rgba(228, 153, 255, 0.28);
   box-shadow: 0 0 6px rgba(228, 153, 255, 0.06);
   backdrop-filter: blur(1px);
-}
-
-.neon-carousel-nav-icon-active {
-  background-color: #00ccff;
-  box-shadow:
-    0 0 8px rgba(0, 204, 255, 0.6),
-    0 0 18px rgba(0, 204, 255, 0.25);
-  border-color: transparent;
-  z-index: 20;
 }
 
 /* Active dot pulse animation (subtle glow, does not move the dot) */
