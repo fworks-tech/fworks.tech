@@ -3,22 +3,43 @@
     {
       "id": "intro",
       "title": "O que é a FWORKS?",
-      "image": "/assets/icons/idea-2.png",
+      "image": "/assets/imgs/me-transparent.webp",
       "order": 1,
-      "content": "A FWORKS TECH nada mais é que um espaço meu, que para quem me conhece, já sou alguém que há uma decada estuda e atua na área de Tecnologia da informação.\n\nA ideia minha ideia aqui é compartilhar o que aprendi nesse tempo e também fazer conexões desses conteúdos com o mundo que vivemos hoje. E o mais importante, sem querer um centavo de retorno financeiro por tudo que compartilharei aqui.\n\nA Internet é um lugar vasto e - para sempre LIVRE -  e cheio de possibilidades, e quero que esse espaço seja um reflexo disso, onde a tecnologia e a liberdade se encontram para transformar ideias em realidade."
+      "content": "A FWORKS TECH nada mais é que um espaço meu, que para quem me conhece, já sou alguém que há praticamente uma década estuda e atua na área de Tecnologia da informação. Mas e para quem não me conhece? Deixa que eu vou me apresentar."
     },
     {
-      "id": "mission",
-      "title": "E qual é a ideia?",
-      "image": "/assets/icons/mission.png",
+      "id": "who-i-am",
+      "title": "Quem sou eu?",
+      "image": "/assets/imgs/me-transparent.webp",
       "order": 2,
-      "content": "A ideia é, sempre que possível, manter este espaço vivo com conteúdos, reflexões e projetos que ajudem o público a entender — de forma acessível e livre de interesses comerciais — o que está por trás das transformações digitais que nos cercam.\n\nMuita gente se preocupa com o avanço da tecnologia, mas pouca gente realmente a entende — e menos ainda sabe como se beneficiar dela.\n\nAqui, quero construir pontes entre o que acontece no mundo digital e a vida real das pessoas. Mostrar que sim, é possível se apropriar da tecnologia, usá-la com consciência e fazer dela uma aliada no presente — e no futuro que estamos moldando juntos."
+      "content": "Sou um entusiasta da tecnologia, apaixonado por aprender e compartilhar conhecimento. Minha jornada começou com curiosidade e evoluiu para uma carreira dedicada ao desenvolvimento de soluções criativas e impactantes. Além de programador, sou alguém que acredita no poder da tecnologia para transformar vidas e conectar pessoas."
+    },
+    {
+      "id": "professional-history",
+      "title": "Trajetória Profissional",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 3,
+      "content": "Ao longo dos últimos anos, tive a oportunidade de trabalhar em projetos que envolvem desenvolvimento de software, gestão de equipes e soluções tecnológicas inovadoras. Minha jornada começou com pequenos projetos, evoluindo para desafios maiores que me permitiram crescer como profissional e como pessoa."
+    },
+    {
+      "id": "skills-certifications",
+      "title": "Tecnologias, Formação e Certificações",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 4,
+      "content": "Sou especializado em tecnologias como React, Next.js, Tailwind CSS e Node.js. Além disso, possuo certificações em desenvolvimento web, arquitetura de software e metodologias ágeis. Minha formação acadêmica e cursos complementares me deram uma base sólida para enfrentar os desafios do mercado."
+    },
+    {
+      "id": "future-perspective",
+      "title": "Perspectiva de Futuro",
+      "image": "/assets/imgs/me-transparent.webp",
+      "order": 5,
+      "content": "Minha visão para o futuro envolve continuar explorando novas tecnologias, contribuindo para projetos que impactem positivamente o mundo e ajudando a construir um ambiente digital mais inclusivo e inovador. Acredito que a tecnologia é uma ferramenta poderosa para transformar ideias em realidade."
     }
   ],
   "seo": {
     "title": "Sobre a FWORKS",
     "description": "Conheça a missão e a origem da FWORKS TECH — conectando inovação, pessoas e propósito.",
-    "keywords": "sobre, fworks, missão, tecnologia, inovação",
+    "keywords": "about, fworks, tech, technology, dev, programming",
     "ogImage": "/assets/og-about-pt.png"
   }
 }

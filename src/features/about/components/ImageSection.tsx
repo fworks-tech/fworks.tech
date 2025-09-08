@@ -30,15 +30,16 @@ export default function ImageSection({ image, title }: Props) {
       initial={{ scale: 0.8 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative flex flex-shrink-0 justify-center"
+      className="relative z-30 flex flex-shrink-0 justify-center"
     >
       <Image
         src={image}
         alt={title || 'Image'}
         priority
-        height={isMobile ? 192 : 420}
-        width={isMobile ? 192 : 420}
-        style={{ position: 'relative' }}
+        height={isMobile ? 220 : 420} // Slightly reduced sizes to improve layout
+        width={isMobile ? 220 : 420}
+        className="neon-border-shadow"
+        style={{ position: 'relative', opacity: 0.8, borderRadius: '50%' }} // Mantém o formato circular
       />
     </motion.div>
   );
