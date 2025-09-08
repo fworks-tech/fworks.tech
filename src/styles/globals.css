@@ -1235,9 +1235,6 @@ video {
   border-radius: 1rem;
 }
 
-.neon-carousel-nav-icon-active {
-  background-color: #00ccff;
-}
 
 /* Adjust carousel dots position and active glow */
 .neon-border.rounded-full {
