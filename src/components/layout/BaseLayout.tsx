@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
 import type { LayoutProps } from '@/types/layout';
@@ -10,6 +11,7 @@ import Loading from '../ui/Loading';
 
 export default function BaseLayout({ children, ...rest }: LayoutProps) {
   const { ready } = useTranslation('common');
+  const router = useRouter();
 
   if (!ready) return <Loading />;
 
@@ -34,7 +36,7 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
           <AnimatePresence mode="wait">
             <motion.div
               className="h-full overflow-hidden"
-              key={typeof children === 'string' ? children : Math.random()} // Garante animação única
+              key={router.asPath}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
