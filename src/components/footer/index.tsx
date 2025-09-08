@@ -9,12 +9,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className="mb-4 flex flex-col items-center justify-center py-6 text-center text-sm text-cyan-400 sm:text-base md:text-lg"
-    >
+    <footer className="mb-4 flex flex-col items-center justify-center py-6 text-center text-sm text-cyan-400 sm:text-base md:text-lg">
       <p>
         © <span>{t('footer.copyright', { year })}</span>
-        <a href="/privacy" className={linksClassNames + " my-1 block"}>
+        <a href="/privacy" className={linksClassNames + ' my-1 block'}>
           {t('footer.privacyPolicy')}
         </a>
       </p>
