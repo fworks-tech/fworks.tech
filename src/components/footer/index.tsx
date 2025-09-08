@@ -14,7 +14,7 @@ export default function Footer() {
     >
       <p>
         © <span>{t('footer.copyright', { year })}</span>
-        <a href="/privacy" className={`${linksClassNames} my-1 block`}>
+        <a href="/privacy" className={linksClassNames + " my-1 block"}>
           {t('footer.privacyPolicy')}
         </a>
       </p>
