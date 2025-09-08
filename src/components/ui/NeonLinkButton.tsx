@@ -8,7 +8,7 @@ type NeonLinkButtonProps = LinkProps & {
 
 /* NeonLinkButton renders a neon-styled animated link button.
  *
- * @param {NeonButtonProps} props - Props extending LinkProps with a label for the button.
+ * @param {NeonLinkButtonProps} props - Props extending LinkProps with a label for the button.
  * @returns {JSX.Element} The neon link button component.
  */
 export default function NeonLinkButton({ label, ...rest }: NeonLinkButtonProps) {
