@@ -1241,7 +1241,9 @@ video {
 .neon-carousel-dot {
   background-color: rgba(228, 153, 255, 0.14); /* increased visibility */
   border: 1px solid rgba(228, 153, 255, 0.28);
-  box-shadow: 0 0 6px rgba(228, 153, 255, 0.06), inset 0 0 6px rgba(0, 204, 255, 0.08);
+  box-shadow:
+    0 0 6px rgba(228, 153, 255, 0.06),
+    inset 0 0 6px rgba(0, 204, 255, 0.08);
   backdrop-filter: blur(1px);
 }
 
@@ -1265,6 +1267,7 @@ video {
 }
 
 .neon-carousel-nav-icon-active {
+  background-color: #00ccff;
   animation: neon-pulse 1.8s ease-in-out infinite;
   will-change: box-shadow;
 }

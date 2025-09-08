@@ -10,7 +10,7 @@ type Props = {
 
 export default function NeonCarousel({ sections, currentIndex, onSelect }: Props) {
   return (
-    <div className="neon-carousel-container mt-2 flex w-full items-center justify-center gap-4 px-6 md:-mt-6 md:px-4">
+    <div className="neon-carousel-container mt-2 flex w-full items-center justify-center gap-4 px-6 md:mt-0 md:px-4">
       {sections?.map((_, index) => {
         const isActive = index === currentIndex;
         const animateProps = isActive ? { opacity: 1 } : { opacity: 0.9 };
