@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
 import type { LayoutProps } from '@/types/layout';
@@ -11,12 +10,11 @@ import Loading from '../ui/Loading';
 
 export default function BaseLayout({ children, ...rest }: LayoutProps) {
   const { ready } = useTranslation('common');
-  const router = useRouter();
 
   if (!ready) return <Loading />;
 
   return (
-    <div className="relative flex h-screen w-full flex-col" {...rest}>
+    <div className="relative flex h-[100dvh] w-full flex-col overflow-hidden" {...rest}>
       {/* Background */}
       <Image
         className="pointer-events-none -z-10 select-none object-cover"
@@ -27,16 +25,15 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
         priority
       />
 
-      <main className="flex h-full w-full items-center justify-center p-8">
-        <div
-          className="neon-border-shadow align-center flex h-full w-full flex-1 flex-col justify-between p-4 sm:p-6"
-          style={{ overflow: 'auto' }}
-        >
+      <main className="flex h-full w-full flex-1 items-start justify-center p-8 sm:mb-12">
+        <div className="neon-border-shadow flex h-full w-full flex-col overflow-auto p-4 sm:p-6">
           <Navbar />
-          <AnimatePresence mode="popLayout" initial={false} key={router.asPath}>
+
+          {/* Conteúdo das páginas */}
+          <AnimatePresence mode="popLayout" initial={false}>
             <motion.div
               className="h-full overflow-y-clip"
-              key={router.asPath}
+              // key={router.asPath}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -45,6 +42,7 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
               {children}
             </motion.div>
           </AnimatePresence>
+
           <Footer />
         </div>
       </main>
