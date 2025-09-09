@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
 import type { LayoutProps } from '@/types/layout';
@@ -10,6 +11,7 @@ import Loading from '../ui/Loading';
 
 export default function BaseLayout({ children, ...rest }: LayoutProps) {
   const { ready } = useTranslation('common');
+  const router = useRouter();
 
   if (!ready) return <Loading />;
 
@@ -28,12 +30,9 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
       <main className="flex h-full w-full flex-1 items-start justify-center p-8 sm:mb-12">
         <div className="neon-border-shadow flex h-full w-full flex-col overflow-auto p-4 sm:p-6">
           <Navbar />
-
-          {/* Conteúdo das páginas */}
-          <AnimatePresence mode="popLayout" initial={false}>
+          <AnimatePresence mode="popLayout" initial={false} key={router.asPath}>
             <motion.div
               className="h-full overflow-y-clip"
-              // key={router.asPath}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -42,7 +41,6 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
               {children}
             </motion.div>
           </AnimatePresence>
-
           <Footer />
         </div>
       </main>
