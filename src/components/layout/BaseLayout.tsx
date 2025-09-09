@@ -32,6 +32,7 @@ export default function BaseLayout({ children, ...rest }: LayoutProps) {
           <Navbar />
           <AnimatePresence mode="popLayout" initial={false} key={router.asPath}>
             <motion.div
+              key={router.asPath}
               className="h-full overflow-y-clip"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
