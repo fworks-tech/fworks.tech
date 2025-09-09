@@ -19,8 +19,8 @@ export default function HomePage() {
   return (
     <>
       <SeoHead {...seo} url="https://fworks.tech/" />
-      <section className="mt-32 h-full w-full p-6 sm:p-8">
-        <div className="flex h-12 flex-auto flex-col items-center justify-center gap-4 text-center">
+      <section className="min-h-0 w-full flex-1 p-6 sm:p-8">
+        <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 text-center">
           <motion.h1
             className="light-neon-text text-center text-5xl font-semibold tracking-tight sm:text-4xl"
             animate={{ opacity: [1, 0.6, 1] }}
