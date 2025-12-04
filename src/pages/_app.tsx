@@ -4,6 +4,8 @@ import '@/styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import type { ReactElement, ReactNode } from 'react';
 
+import { orbitron } from '@/lib/fonts';
+
 import nextI18NextConfig from '../../next-i18next.config';
 
 // Páginas que podem ter um layout customizado
@@ -18,7 +20,7 @@ type AppPropsWithLayout = AppProps & {
 function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page: React.ReactElement) => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return <div className={orbitron.variable}>{getLayout(<Component {...pageProps} />)}</div>;
 }
 
 export default appWithTranslation(App, nextI18NextConfig);
