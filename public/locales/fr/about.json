@@ -3,35 +3,35 @@
     {
       "id": "intro",
       "title": "Qu'est-ce que FWORKS?",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 1,
       "content": "FWORKS TECH est simplement mon espace personnel. Pour ceux qui me connaissent, j’étudie et je travaille dans le domaine des technologies de l’information depuis près d’une décennie. Et pour ceux qui ne me connaissent pas encore ? Laissez-moi me présenter."
     },
     {
       "id": "who-i-am",
       "title": "Qui suis-je?",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 2,
       "content": "Je suis un passionné de technologie, avide d’apprendre et de partager mes connaissances. Mon parcours a commencé par la curiosité et a évolué vers une carrière dédiée au développement de solutions créatives et impactantes. Au-delà du rôle de programmeur, je crois au pouvoir de la technologie pour transformer des vies et connecter les gens."
     },
     {
       "id": "professional-history",
       "title": "Mon Parcours Professionnel",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 3,
       "content": "Au cours des dernières années, j’ai eu l’opportunité de travailler sur des projets impliquant le développement logiciel, la gestion d’équipes et des solutions technologiques innovantes. J’ai commencé par de petits projets, qui ont évolué vers des défis plus importants me permettant de grandir en tant que professionnel et en tant que personne."
     },
     {
       "id": "skills-certifications",
       "title": "Technologies, Formation et Certifications",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 4,
       "content": "Je suis spécialisé dans des technologies comme React, Next.js, Tailwind CSS et Node.js. J’ai également obtenu des certifications en développement web, architecture logicielle et méthodologies agiles. Ma formation académique et mes cours complémentaires m’ont donné une base solide pour relever les défis du marché."
     },
     {
       "id": "future-perspective",
       "title": "Perspectives d’Avenir",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 5,
       "content": "Ma vision pour l’avenir est de continuer à explorer de nouvelles technologies, contribuer à des projets ayant un impact positif sur le monde et aider à construire un environnement numérique plus inclusif et innovant. Je crois que la technologie est un outil puissant pour transformer les idées en réalité."
     }
