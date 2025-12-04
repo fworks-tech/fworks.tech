@@ -4,13 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          {/* Add your custom font link here */}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
