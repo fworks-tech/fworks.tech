@@ -3,35 +3,35 @@
     {
       "id": "intro",
       "title": "¿Qué es FWORKS?",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 1,
       "content": "FWORKS TECH es simplemente mi espacio personal. Para quienes me conocen, llevo casi una década estudiando y trabajando en el área de Tecnología de la Información. ¿Y para quienes no me conocen? Permíteme presentarme."
     },
     {
       "id": "who-i-am",
       "title": "¿Quién Soy?",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 2,
       "content": "Soy un entusiasta de la tecnología, apasionado por aprender y compartir conocimiento. Mi camino empezó con curiosidad y evolucionó hacia una carrera dedicada al desarrollo de soluciones creativas e impactantes. Más allá de programador, creo en el poder de la tecnología para transformar vidas y conectar personas."
     },
     {
       "id": "professional-history",
       "title": "Historia Profesional",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 3,
       "content": "En los últimos años, tuve la oportunidad de trabajar en proyectos que involucran desarrollo de software, gestión de equipos y soluciones tecnológicas innovadoras. Comencé con proyectos pequeños y fui avanzando hacia desafíos mayores que me permitieron crecer como profesional y como persona."
     },
     {
       "id": "skills-certifications",
       "title": "Tecnologías, Formación y Certificaciones",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 4,
       "content": "Me especializo en tecnologías como React, Next.js, Tailwind CSS y Node.js. Además, cuento con certificaciones en desarrollo web, arquitectura de software y metodologías ágiles. Mi formación académica y cursos complementarios me han dado una base sólida para enfrentar los desafíos del mercado."
     },
     {
       "id": "future-perspective",
       "title": "Perspectiva de Futuro",
-      "image": "/assets/imgs/me-transparent.webp",
+      "image": "/assets/imgs/profile-office.png",
       "order": 5,
       "content": "Mi visión para el futuro es seguir explorando nuevas tecnologías, contribuir en proyectos que impacten positivamente al mundo y ayudar a construir un entorno digital más inclusivo e innovador. Creo que la tecnología es una herramienta poderosa para transformar ideas en realidad."
     }
