@@ -4,6 +4,9 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      fontFamily: {
+        orbitron: ['var(--font-orbitron)', 'sans-serif']
+      },
       fontSize: {
         xs: '0.75rem', // Extra pequeno
         sm: '0.875rem', // Pequeno

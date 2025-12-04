@@ -30,17 +30,28 @@ export default function ImageSection({ image, title }: Props) {
       initial={{ scale: 0.8 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative flex flex-shrink-0 justify-center"
+      className="relative flex h-full w-full flex-shrink-0 justify-center"
     >
-      <Image
-        src={image}
-        alt={title || 'Profile image'}
-        priority
-        height={isMobile ? 220 : 420}
-        width={isMobile ? 220 : 420}
-        className="neon-border-shadow rounded-full opacity-80"
-        style={{ borderRadius: '50%' }}
-      />
+      {isMobile ? (
+        <Image
+          src={image}
+          alt={title || 'Profile image'}
+          priority
+          height={220}
+          width={220}
+          className="neon-border-shadow rounded-full opacity-80"
+          style={{ borderRadius: '50%' }}
+        />
+      ) : (
+        <Image
+          src={image}
+          alt={title || 'Profile image'}
+          priority
+          fill
+          className="neon-border-shadow rounded-full object-contain opacity-80"
+          style={{ borderRadius: '50%' }}
+        />
+      )}
     </motion.div>
   );
 }
