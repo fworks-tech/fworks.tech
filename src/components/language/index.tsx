@@ -114,8 +114,8 @@ export default function Language() {
       </button>
 
       {isOpen && (
-        <div className="animate-fade-in neon-border absolute right-0 mt-4 flex w-44 origin-top-right scale-100 cursor-pointer">
-          <ul className="text-md py-1 text-gray-100">
+        <div className="animate-fade-in neon-border absolute right-0 z-50 mt-4 flex w-44 origin-top-right scale-100 cursor-pointer">
+          <ul className="text-md neon-border-shadow w-full rounded-full bg-[#1e005f] py-2 text-gray-100 opacity-90">
             {languages.map((lang) => (
               <li key={lang.code}>
                 <button
