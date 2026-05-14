@@ -14,6 +14,6 @@ This project showcases clean architecture, strong TypeScript practices, dynamic 
 <!-- fworks-readme-footer v1 -->
 ## Links
 
-- Repositório: https://github.com/fworks-tech/fworks.tech
+- Repository: https://github.com/fworks-tech/fworks.tech
 - Portfolio: https://fworks.tech
 <!-- /fworks-readme-footer v1 -->
