@@ -1,4 +1,4 @@
-# FWORKS.tech
+﻿# FWORKS.tech
 
 Welcome to the official repository of FWORKS.tech — a portfolio crafted with modern fullstack technologies.
 
@@ -10,3 +10,10 @@ Welcome to the official repository of FWORKS.tech — a portfolio crafted with m
 ---
 
 This project showcases clean architecture, strong TypeScript practices, dynamic SEO, and a design-first development approach.
+
+<!-- fworks-readme-footer v1 -->
+## Links
+
+- Repositório: https://github.com/fworks-tech/fworks.tech
+- Portfolio: https://fworks.tech
+<!-- /fworks-readme-footer v1 -->
